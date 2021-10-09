@@ -3,9 +3,9 @@
 
  <title>Soham Phade</title>
  <link href="http://sohamphade.github.io/_site/atom.xml" rel="self"/>
- <link href="http://sohamphade.github.io/_site/"/>
- <updated>2021-10-09T11:16:49-07:00</updated>
- <id>http://sohamphade.github.io/_site</id>
+ <link href="http://sohamphade.github.io_site/"/>
+ <updated>2021-10-09T15:31:02-07:00</updated>
+ <id>http://sohamphade.github.io</id>
  <author>
    <name>Soham Phade</name>
    <email>soham_phade@berkeley.edu</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>What does Game Theory have to say about E-Commerce?</title>
-   <link href="http://sohamphade.github.io/_site/gt_ecommerce/"/>
+   <link href="http://sohamphade.github.io_site/gt_ecommerce/"/>
    <updated>2021-01-17T00:00:00-08:00</updated>
-   <id>http://sohamphade.github.io/_site/GT-ECommerce</id>
+   <id>http://sohamphade.github.io/GT-ECommerce</id>
    <content type="html">&lt;p&gt;E-commerce applications have enabled economic aspects 
 – such as production, distribution, and consumption of goods and services – 
 to permeate our social fabric to an extent never seen before. 
@@ -258,9 +258,9 @@ However, if we want to answer questions like the objectives and impacts of these
  
  <entry>
    <title>Game Theory and Market Design when Agents have Cumulative Prospect Theory Preferences</title>
-   <link href="http://sohamphade.github.io/_site/cptgames/"/>
+   <link href="http://sohamphade.github.io_site/cptgames/"/>
    <updated>2020-11-09T00:00:00-08:00</updated>
-   <id>http://sohamphade.github.io/_site/CPTGames</id>
+   <id>http://sohamphade.github.io/CPTGames</id>
    <content type="html">&lt;p&gt;In this project, we systematically study game-theoretic settings (in particular, non-cooperative games) when the players’ preferences are modeled using &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_prospect_theory&quot;&gt;cumulative prospect theory (CPT)&lt;/a&gt;.
 CPT is a generalization of expected utility theory (EUT) and one of the leading decision theories to model human preferences when faced with uncertainty. It was proposed by &lt;a href=&quot;https://en.wikipedia.org/wiki/Daniel_Kahneman&quot;&gt;Daniel Kahneman&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Amos_Tversky&quot;&gt;Amos Tversky&lt;/a&gt; for which Kahneman received the &lt;a href=&quot;https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/&quot;&gt;Nobel Memorial Prize in Economic Sciences&lt;/a&gt;. 
 There has been a growing discussion concerning the benefits (and limits) of using CPT in game theory and economics. 
@@ -430,9 +430,9 @@ We are at a fascinating juncture in this field, where theory and practice can as
  
  <entry>
    <title>Behavior-Aware System Design</title>
-   <link href="http://sohamphade.github.io/_site/basd/"/>
+   <link href="http://sohamphade.github.io_site/basd/"/>
    <updated>2020-11-05T00:00:00-08:00</updated>
-   <id>http://sohamphade.github.io/_site/BASD</id>
+   <id>http://sohamphade.github.io/BASD</id>
    <content type="html">&lt;p&gt;The recent decades have been marked by extensive technological advancements in domains such as Internet, Computing, Communication, and Artificial Intelligence.
 These have lead to rapidly evolving technolgies such as cloud computing, automated services, communication platforms, big data software companies, and online marketplaces, that have become an integral part of our daily lives.&lt;/p&gt;
 
