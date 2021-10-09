@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+# except
+!.gitignore
+!README.md
+
+
+!*/
+
+!_site/*
+!/files/*
