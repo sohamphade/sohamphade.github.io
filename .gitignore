@@ -4,6 +4,7 @@
 # except
 !.gitignore
 !README.md
+!.nojekyll
 
 
 !*/
