@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Soham Phade</title>
- <link href="http://sohamphade.github.io/_site/atom.xml" rel="self"/>
- <link href="http://sohamphade.github.io_site/"/>
- <updated>2021-10-22T11:39:45-07:00</updated>
- <id>http://sohamphade.github.io</id>
+ <link href="https://sohamphade.github.io/_site/atom.xml" rel="self"/>
+ <link href="https://sohamphade.github.io_site/"/>
+ <updated>2021-10-22T11:59:13-07:00</updated>
+ <id>https://sohamphade.github.io</id>
  <author>
    <name>Soham Phade</name>
    <email>soham_phade@berkeley.edu</email>
@@ -14,9 +14,9 @@
  
  <entry>
    <title>What does Game Theory have to say about E-Commerce?</title>
-   <link href="http://sohamphade.github.io_site/gt_ecommerce/"/>
+   <link href="https://sohamphade.github.io_site/gt_ecommerce/"/>
    <updated>2021-01-17T00:00:00-08:00</updated>
-   <id>http://sohamphade.github.io/GT-ECommerce</id>
+   <id>https://sohamphade.github.io/GT-ECommerce</id>
    <content type="html">&lt;p&gt;E-commerce applications have enabled economic aspects 
 – such as production, distribution, and consumption of goods and services – 
 to permeate our social fabric to an extent never seen before. 
@@ -91,7 +91,7 @@ Amazon provides multiple delivery options with varying charges. Just as recommen
 They also determine the customer-company relations. 
 A better understanding of the customers’ behavioral responses will go a long way in designing these systems. 
 Several answers to this study will come from economics and game theory. 
-(See &lt;a href=&quot;http://sohamphade.github.io/_site/basd/index.html&quot;&gt;Behavior-Aware System Design&lt;/a&gt; post for further discussion on this.)&lt;/p&gt;
+(See &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;Behavior-Aware System Design&lt;/a&gt; post for further discussion on this.)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The final stage&lt;/strong&gt; is that of incorporating feedback. 
 It includes operations like keeping track of user actions, choices, responses, and ratings; collecting and processing this data. 
@@ -99,7 +99,7 @@ The digital revolution and the emergence of companies with billions of users hav
 It will help improve the effectiveness of the previous two stages.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;http://sohamphade.github.io/_site/assets/3_pillars.png&quot; alt=&quot;3_pillars_of_ecommerce&quot; /&gt;
+  &lt;img src=&quot;https://sohamphade.github.io/_site/assets/3_pillars.png&quot; alt=&quot;3_pillars_of_ecommerce&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;All this might sound similar to several articles over the Internet trumpeting cool ideas in the form of mantras or principles. 
@@ -258,9 +258,9 @@ However, if we want to answer questions like the objectives and impacts of these
  
  <entry>
    <title>Game Theory and Market Design when Agents have Cumulative Prospect Theory Preferences</title>
-   <link href="http://sohamphade.github.io_site/cptgames/"/>
+   <link href="https://sohamphade.github.io_site/cptgames/"/>
    <updated>2020-11-09T00:00:00-08:00</updated>
-   <id>http://sohamphade.github.io/CPTGames</id>
+   <id>https://sohamphade.github.io/CPTGames</id>
    <content type="html">&lt;p&gt;In this project, we systematically study game-theoretic settings (in particular, non-cooperative games) when the players’ preferences are modeled using &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_prospect_theory&quot;&gt;cumulative prospect theory (CPT)&lt;/a&gt;.
 CPT is a generalization of expected utility theory (EUT) and one of the leading decision theories to model human preferences when faced with uncertainty. It was proposed by &lt;a href=&quot;https://en.wikipedia.org/wiki/Daniel_Kahneman&quot;&gt;Daniel Kahneman&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Amos_Tversky&quot;&gt;Amos Tversky&lt;/a&gt; for which Kahneman received the &lt;a href=&quot;https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/&quot;&gt;Nobel Memorial Prize in Economic Sciences&lt;/a&gt;. 
 There has been a growing discussion concerning the benefits (and limits) of using CPT in game theory and economics. 
@@ -286,14 +286,14 @@ Knowledge about the structure of the equilibria, especially under presumably mor
 They can also help in suggesting system improvements or policy changes such as advertising strategies, cybersecurity, or military tactics – &lt;em&gt;like &lt;a href=&quot;https://en.wikipedia.org/wiki/WarGame&quot;&gt;WOPR from WarGames&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
 
 &lt;!-- 
-| ![wargames movie image](http://sohamphade.github.io/_site/assets/wargames.jpg) | 
+| ![wargames movie image](https://sohamphade.github.io/_site/assets/wargames.jpg) | 
 |:--:| 
 | *Space* |
 ---&gt;
 
 &lt;!--
 &lt;figure&gt;
-  &lt;img src=&quot;http://sohamphade.github.io/_site/assets/wargames.jpg&quot; alt=&quot;my alt text&quot;/&gt;
+  &lt;img src=&quot;https://sohamphade.github.io/_site/assets/wargames.jpg&quot; alt=&quot;my alt text&quot;/&gt;
   &lt;figcaption&gt;The fictional US military supercomputer, War Operation Plan Response (WOPR), was programmed to simulate the possible outcomes of a nuclear war.&lt;/figcaption&gt;
 &lt;/figure&gt;
 ---&gt;
@@ -339,7 +339,7 @@ Such messages play the role of nudges that help in aligning the beliefs of the p
 &lt;p&gt;We already observe such &lt;a href=&quot;https://en.wikipedia.org/wiki/Nudge_theory&quot;&gt;nudges&lt;/a&gt; and incentives being used around us. 
 But a theory explaining these practices is still in an infant stage.
 Our mediated mechanism design framework is a very promising direction at explaining these observations theoretically and improving the design of these systems.
-Mechanism design is commonly referred to as the engineering side of game theory. These theoretical and methodological results can have substantial implications for the design of &lt;a href=&quot;http://sohamphade.github.io/_site/basd/index.html&quot;&gt;behavior-aware systems&lt;/a&gt; such as online marketplaces and social networks.&lt;/p&gt;
+Mechanism design is commonly referred to as the engineering side of game theory. These theoretical and methodological results can have substantial implications for the design of &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;behavior-aware systems&lt;/a&gt; such as online marketplaces and social networks.&lt;/p&gt;
 
 &lt;p&gt;There is an important common thread that runs through each of the above studies.
 CPT preferences do not satisfy something called the betweenness property.
@@ -430,9 +430,9 @@ We are at a fascinating juncture in this field, where theory and practice can as
  
  <entry>
    <title>Behavior-Aware System Design</title>
-   <link href="http://sohamphade.github.io_site/basd/"/>
+   <link href="https://sohamphade.github.io_site/basd/"/>
    <updated>2020-11-05T00:00:00-08:00</updated>
-   <id>http://sohamphade.github.io/BASD</id>
+   <id>https://sohamphade.github.io/BASD</id>
    <content type="html">&lt;p&gt;The recent decades have been marked by extensive technological advancements in domains such as Internet, Computing, Communication, and Artificial Intelligence.
 These have lead to rapidly evolving technolgies such as cloud computing, automated services, communication platforms, big data software companies, and online marketplaces, that have become an integral part of our daily lives.&lt;/p&gt;
 
