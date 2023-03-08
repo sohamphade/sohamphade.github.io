@@ -1,0 +1,831 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Soham Phade</title>
+ <link href="https://sohamphade.github.io/_site/atom.xml" rel="self"/>
+ <link href="https://sohamphade.github.io_site/"/>
+ <updated>2023-03-09T00:34:52+05:30</updated>
+ <id>https://sohamphade.github.io</id>
+ <author>
+   <name>Soham Phade</name>
+   <email>soham_phade@berkeley.edu</email>
+ </author>
+
+ 
+ <entry>
+   <title>Role of Communication, Data Analytics and Artificial Intelligence in Resource Allocation</title>
+   <link href="https://sohamphade.github.io_site/AI_comm_in_resource_alloc/"/>
+   <updated>2021-05-27T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/AI-comm-in-resource-alloc</id>
+   <content type="html">&lt;p&gt;The network resource allocation problem considered in Chapter 2 and the mechanism design framework discussed in Chapter 6 have several features in common. They comprise of a set of players which have preferences over their outcomes known privately to them. In the network resource allocation problem, the outcome for a player is the amount of resource al- located to that player, for example, bandwidth over the Internet. Resource allocation more generally would include things such as transportation units in vehicle routing or delivery systems, servers in computation networks, advertising space or visibility in social networks, or contract provisioning in financial networks or labor markets. On the other hand, player outcomes could take various forms as the delay experienced by a driver or a customer receiv- ing a delivery, the quality of the goods or services provided to the users, or it could be the financial gains or prospects associated with the outcome. The system operator is primarily responsible for allocating resources. In the network resource allocation problem, the system operator is assumed to allocate resources to each player provided they satisfy the capacity constraints. But more generally, as considered in the mechanism design framework (Chap- ter 6), it implements an allocation from the set of available allocations and the implemented allocation in turn influences the outcomes for each player.&lt;/p&gt;
+
+&lt;p&gt;The system operator is central to this setup to facilitate optimal resource allocation. It communicates with each player, sending messages that provide important system related information to the player which affect the players beliefs and actions. These messages could take the form of providing available options to the players, their corresponding prices, and the uncertainty associated with different outcomes. For example, a ride hailing platform provides the riders with different traveling options with estimates about their delays, service experience, and associated prices. The players respond to these messages through appro- priate signaling channels provided by the system operator. These responses are governed by the players’ private information about their types and their surroundings. For example, in the ride hailing example, their flexibility with time of arrival or departure, their budget, their knowledge about the people around them seeking transportation services, etc. Their responses are also affected by the behavioral traits displayed by them and the players around them and as well as their strategic policies. The system operator aggregates all these signals from the players and then allocates resources accordingly. Additionally, the system operator also maintains information about the environment and in conjunction with the information collected from the players, it is able to allocate resource more efficiently. It is evident that for the proper functioning of a system under this setup is closely tied to the communication protocols provided by the system operator and its ability to learn from them.&lt;/p&gt;
+
+&lt;p&gt;Notice that we are focusing our attention over markets where there is a central planner (or what we are calling a system operator) who is deciding the underlying mechanics of the system within the physical constraints and providing communication channels to the players to indicate their individual needs and preferences. Although the communication protocol often leads to a decentralized market-based mechanism, the freedom of choice for the users is restricted to the options provided by the system operator, and it is important that we maintain caution in designing these protocols. Having a central planner definitely brings the perks of improved efficiency due to potentially better planning opportunities but this is conditioned on the availability of enough relevant information. Hayek argues:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;If we can agree that the economic problem of society is mainly one of rapid adaptation to changes in the particular circumstances of time and place, it would seem to follow that the ultimate decisions must be left to the people who are familiar with these circumstances, who know directly of the relevant changes and of the resources immediately available to meet them. We cannot expect that this problem will be solved by first communicating all this knowledge to a central board which, after integrating all knowledge, issues its orders. We must solve it by some form of decentralization. But this answers only part of our problem. We need decentralization because only thus can we ensure that the knowledge of the particular circumstances of time and place will be promptly used. But the “man on the spot” cannot decide solely on the basis of his limited but intimate knowledge of the facts of his immediate surroundings. There still remains the problem of communicating to him such further information as he needs to fit his decisions into the whole pattern of changes of the larger economic system.
+ &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;—Friedrich Hayek, &lt;cite&gt;“The Use of Knowledge in Society.” (1945).&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;In the years following the period Hayek made this remark, communication technologies have made huge progress. Data collection and signaling delays have gotten reduced to microseconds with the advent of the Internet, and indeed we are seeing a lot of centralized markets in the form of big online marketplaces. But there are still several bottlenecks showing up in the form of learning useful information from all the signals and data. Besides, incorporating behavioral features in the design of these systems in a principled manner can go a long way. For example, we saw in Chapter 6, that a mediated mechanism which includes a messaging stage from the system provider to the players can help implement social choice functions which are not implementable otherwise (plus implement them truthfully by direct mechanisms). More practically, this would transform into artificial indicators from the system provider to the players that help align the players beliefs. For example, consider a food delivery platform that allows customers to order food from restaurants through their app. The platform can initiate a program where they randomly select some users and provide them with discounted service for long distance orders. As the players use this app repeatedly, they start modifying their strategies in response to this program. For example, a user would restrict his orders to local restaurants and order from far away restaurants only when he gets the message that he is among the lucky chosen customers. This is an example of a nudge provided by the platform to alter customer behavior. It is possible that such strategies would naturally come out of our mechanism design framework. Besides, our framework will help answer the question of exactly for what purpose are these nudges or incentive programs being used - How do they affect the welfare of customers? How do they affect the revenue of the platform?&lt;/p&gt;
+
+&lt;p&gt;When applied to real-world scenarios, it is very likely that the solution coming out from theory would require a complex signaling scheme between the system operator and the play- ers. Naturally, human players would not be able to maneuver if such complex signaling schemes are implemented in practice. Additionally, many times the system operator does not have access to all the necessary information related to resource availability and implemen- tation. We will now discuss ways in which these communication protocols and information collection activities can be implemented in practice. Developments in Artificial Intelligence (AI) would play a key role in these aspects.&lt;/p&gt;
+
+&lt;p&gt;Today, big data analytics is a hot topic that has found applications in several domains such as manufacturing, commerce, healthcare, financial services, safety and security. It is being used to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Predict equipment failure: Machine data such as its year of manufacturing, make, model, log entries, sensor data, error messages, engine temperature, and other factors can be used to deploy maintenance more efficiently and predict the remaining optimal life and state of systems and components.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Assess resource availability: In situations where it is hard to get direct access to re- source data, information from other sources such as user feedback can be analyzed to access this information.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Anticipate customer demand: Data from focus groups, social media, and customer feedback, which comes in varying formats, can be used for product development, re- source deployment, and operation fine-tuning to improve customer experience.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Identify high-value customers: Insights from customer choices and spending patterns can be used to identify types of customers and use this information to target marketing strategies accordingly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optimize merchandising: Analyzing data from mobile apps, in-store purchases, and geolocations will help improve inventory management and consequently encourage cus- tomers to complete purchases.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Perform pricing analytics: Transaction data and information about supply and demand will help improve pricing strategies.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Provide personalized recommendations: Data collected from repeated interactions with the customers can be used to provide offers that are fine-tuned to their requirements.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Detect irregularity: Data from past behavior patterns can be used to detect fraud by identifying irregular transactions, to avoid accidents by detecting irregular driving patterns, or to caution customers against decisions they might consider irresponsible if they were in a different emotional state.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Notice how most of these tasks can be conveniently stated in our framework based on game theory, economics and behavioral psychology. Indeed, predicting equipment failure and assessing resource availability are related to the system operator gathering information about the environment such as capacity constraints in the model discussed in Chapter 2 or the allocation set and the mappings from allocation to outcomes in the mechanism design framework discussed in Chapter 6. Optimizing merchandising is a related task where the system operator actively influences the resource availability. Anticipating customer demand and identifying high-value customers relates to learning the type of players. Personalized recommendations and pricing are a part of the communication protocol between the players and the system operator. Detecting irregularity and fraud are a by-product of our behavioral approach that would help improve safety and security.&lt;/p&gt;
+
+&lt;p&gt;The learning tasks above such as gathering information about the environment or the players behavior and needs will involve taking advantage of the huge data collected through repeated interactions between the players and the systems, data coming from sensors and other unstructured sources like natural language or images. AI techniques such as Machine Learning (ML) and Reinforcement Learning (RL) algorithms aim to solve these problems. These algorithms require the designer to provide an objective function to maximize or a loss function to minimize. Also the communication framework is often assumed fixed exogenously either in an ad hoc fashion or relying on the designer’s experience. Our holistic approach will not only guide the design of these objective functions and communication protocols but it will also incorporate the network effects coming from strategic interaction between the players that are often missing from AI studies. Rarely is it true that the decisions and policies matter to a single individual without affecting other players in the system. Our framework will allow us to approach these problems in a principled manner and give rise to end-to-end solutions that are interpretable, efficient, and robust. Ideally, we want AI to be an accessory that would help implement the market-based strategy coming out of our framework in a practical manner by circumventing the complexity in the proposed solution. This will necessarily give rise to approximate solutions and methods from approximation theory, computation theory, and complexity theory that have gained prominence in computer science will be of special interest.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Future of Behavioral Network Economics</title>
+   <link href="https://sohamphade.github.io_site/future_of_behavioral_net_econ/"/>
+   <updated>2021-05-20T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/future-of-beh-net-econ</id>
+   <content type="html">&lt;p&gt;EUT has been the backbone of almost every development in economics and game theory. It feels natural to extend these achievements to more general and better models of behavior if possible. CPT is an excellent tool to make progress in this direction. In my experience, CPT often introduces several modeling complications, however, in most cases, as is evident from this thesis, it is possible to extend the results from game theory and economics to players with CPT preferences. In each instance, we had to make special provisions either to the underlying framework or define appropriate notions - new ones or old ones with modified interpretations. This portrays the richness of this pursuit and a cue for future undertakings along these lines.&lt;/p&gt;
+
+&lt;p&gt;By no means this means that CPT can solve all the problems observed due to behavioral factors and deviations from EUT. For example, in [102], Nwogugu points out that “human beings and human decision making are subject to emotions, fairness considerations, ethical considerations, implied or actual constraints, personal aspirations, philosophical differences, regret, regret aversion, social pressure, peer pressure, phobias, perception of incentives, differ- ences in cognition, biological differences in neural activity, willingness to defer, reciprocation, and willingness to use risk management tools, all of which result in significant departures from rationality and traditional models of humans in decision making.” Some of these as- pects can be accounted for by CPT and some cannot. This doesn’t mean that we should abandon the approach based on theories of rationality. Indeed, principled approaches based on fundamental theoretical developments have often helped in guiding real-world applica- tions. Here is an excerpt from [118] stated in another context that illustrates the value of theoretical pursuits in applied fields:&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;&quot;Consider the design of suspension bridges. The Newtonian physics they embody is beautiful both in mathematics and in steel, and college students can be taught to derive the curves that describe the shape of the supporting cables. But no bridge could be built based only on this elegant theoretical treatment, in which the only force is gravity, and all beams are perfectly rigid. Real bridges are built of steel and rest on rock and soil and water, and so bridge design also concerns metal fatigue, soil mechanics, and the forces of waves and wind. Many design questions concerning these real-world complications cannot be answered analytically but, instead, must be explored using physical or computational models. Often these involve estimating magnitudes of phenomena missing from the simple Newtonian model, some of which are small enough to be of little consequence, while others will cause the bridge to fall down if not adequately addressed. Just as no suspension bridges could be built without an understanding of the underlying physics, neither could any be built without understanding many additional features, also physical in nature, but more varied and complex than addressed by the simple model. These additional features, and how they are related to and interact with that part of the physics captured by the simple model, are the concern of the scientific literature of engineering. Some of this is less elegant than the Newtonian model, but it is what makes bridges stand. Just as important, it allows bridges designed on the same basic Newtonian model to be built longer, stronger, and lighter over time, as the complexities and how to deal with them become better understood.&quot; &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;—Roth and Peranson, &lt;cite&gt;“The redesign of the matching market for American physicians: Some engineering aspects of economic design.” In: American economic review (1999).&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Such an engineering approach is essential in behavioral economics too. Today, behavioral economics is often seen as a magician’s tool used to manipulate human choices and responses in contrast to the mainstream developments in economics and game theory. For example, one of the most frequently cited examples of a nudge is the etching of the image of a housefly into the men’s room urinals at Amsterdam’s Schiphol Airport, which is intended to “improve the aim.” Some of the behavioral economists have often expressed their discomfort in this approach. For example, David Gal, a professor of marketing at the University of Illinois at Chicago, says in an article that appeared in the New York Times with the title “Selling Behavioral Economics”: “There is nothing wrong with achieving small victories with mi- nor interventions. The worry, however, is that the perceived simplicity and efficacy of such tactics will distract decision makers from more substantive efforts—for example, reducing electricity consumption by taxing it more heavily or investing in renewable energy resources. It is great that behavioral economics is receiving its due; the field has contributed signifi- cantly to our understanding of ourselves. But in all the excitement, its important to keep an eye on its limits.” George Loewenstein, a professor of economics and psychology at Carnegie Mellon University and Peter Ubel, a professor of business and public policy at Duke and the author of “Free Market Madness: Why Human Nature Is at Odds With Economics,” say in an article that appeared in the New York Times with the title “Economics Behaving Badly”: “Behavioral economics should complement, not substitute for, more substantive economic interventions. If traditional economics suggests that we should have a larger price differ- ence between sugar-free and sugared drinks, behavioral economics could suggest whether consumers would respond better to a subsidy on unsweetened drinks or a tax on sugary drinks. But thats the most it can do. For all of its insights, behavioral economics alone is not a viable alternative to the kinds of far-reaching policies we need to tackle our nations challenges.”&lt;/p&gt;
+
+&lt;p&gt;In my view, behavioral economics need not be limited as an addendum, but instead we must try to bring behavioral economics to the same level of rigor as classical economics. In this work, we have just scratched the surface in this regard. Already we saw several benefits of using CPT to model the players’ behavior. For example, in Chapter 2 we saw the benefits of lotteries in resource allocation which cannot be explained by EUT. Furthermore, the fact that optimal resource allocation can be achieved in a market-based setting with real- time signals between the players and the system operator would enable its implementation in real-world scenarios. In Chapter 6, we saw the use of the messaging stage to recover the revelation principle. In this chapter, we will discuss few directions for future work where behavioral economics would play a huge role if applied in the spirit of the engineering approach mentioned above. Besides, to include behavioral features not explained by CPT, we will have to incorporate other behavioral theories (some of which exist today, and some which will be developed in the future). It is important that these behavioral theories have a nice mathematical formulation. By a nice mathematical formulation, I mean something that can be used to model, study, and develop applications and algorithms for social systems.&lt;/p&gt;
+
+&lt;p&gt;Until now in this thesis, I have mainly restricted to making concrete statements about abstract theoretical ideas. In this chapter, at the expense of making half-baked proposals or impractical claims, I will attempt to unwrap some of the theoretical insights developed in this thesis, and provide a version of how they could play out in real-world applications. Finally, to express my intention towards this thesis and the spirit in which this work and the work to follow should be interpreted, I would like to quote Professor Rummel from his 1975 book “Understanding Conflict and War, Vol. 1: The Dynamic Psychological Field,”&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;&quot;I offer a word about my overall orientation toward this effort. I believe that to know ourselves we must focus on ourselves as individuals and in society, not on our concrete environment, physical nature, or objective vehicles. The proper study is of our meanings, values, motives, perceptions, inner complexes, and powers. But we can know ourselves only through a particular perspective, a point of view. Whether this perspective is True, we cannot know.
+However, whether my field view is the proper perspective, whether my efforts have born fruit, whether I have deluded myself about the importance of what I now have to say, should be a matter for discussion, critical evaluation, and debate. What I am offering is not Truth or the Way, but my contributions to the Struggle of Ideas out of which a better future may be forged. Our knowledge and our ability to handle our problems progress through the open conflict of ideas, through the tests of phenomenological adequacy, inner consistency, and practical-moral consequences. Reason may but err, but it can be moral. If we must err, let it be on the side of our creativity, our freedom, our betterment.&quot;
+ &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;—Rudolf Joseph Rummel, &lt;cite&gt;“Understanding Conflict and War, Vol. 1: The Dynamic Psychological Field.” (1975)&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Example Applications of Behavioral Network Economics</title>
+   <link href="https://sohamphade.github.io_site/applications_of_behavioral_net_econ/"/>
+   <updated>2021-05-12T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/app-beh-net-econ</id>
+   <content type="html">&lt;h2 id=&quot;transportation-networks&quot;&gt;Transportation Networks&lt;/h2&gt;
+
+&lt;p&gt;Let’s say you want to reach the airport to catch a flight. You open a navigation app, such as Google Maps or Apple Maps, and check for possible routes and the estimated times of arrival. Your topmost concern is to arrive at your destination in time. Plus, you’d like to have a good estimate of your arrival time. Compare it with someone who might be using the same app but is looking for a scenic route and not so worried about his arrival time. At any given time, hundreds of thousands of users are using such apps to find what suits them the best. All these different people have varied requirements based on their purposes and preferences while sharing the same infrastructure and resources. The app recommendations affect their choices, and their choices have externalities that affect the conditions for others. One could imagine the app providing signals and economic incentives to alter traffic patterns.&lt;/p&gt;
+
+&lt;p&gt;A familiar example in this spirit is clearing the way for emergency vehicles. Something that we have been doing for several years. Another example is charging a variable rate adapted to the traffic conditions for the use of the express lanes. Given the prevalent use of navigation apps and other communicating devices today, we have more options to influence traffic routing. At the same time, we can collect and process a lot more data. Our goal is to explore ideas along these lines. An important thing to notice here is that the players in this system are human agents and they are bound to display behavioral features that do not fall under the traditional notions of rationality. For example, drivers might prefer routes that they are familiar with, even if the alternative route is faster. (This is reminiscent of the well-documented endowment effect, which says that people are more likely to hold onto an object they own rather than trade it for an equally or higher valued alternative they do not own. The fear of the unknown and uncertainty also plays a role here.) We must incorporate these behavioral features into system modeling. Furthermore, this applies to all forms of transportation services such as public transport, railways, airways, waterways, shipping of goods, etc.&lt;/p&gt;
+
+&lt;h2 id=&quot;communication-networks&quot;&gt;Communication Networks&lt;/h2&gt;
+
+&lt;p&gt;Using navigation apps to help route traffic is just an instance of taking advantage of the advanced communication technologies for improving resource allocation. Indeed, communi- cating the availability of resources, individual preferences, and incentives for resource man- agement, and controlling system parameters require real-time information transfer and sig- naling. No wonder the Internet was the first to witness real-time algorithm-based traffic management. Transmission Control Protocol (TCP) and bandwidth allocation algorithms have helped avoid the congestion issues that had plagued the Internet before TCP. The the- oretical foundations for this work were laid by Kelly in the late 1990s [72, 73]. In Chapter 2, we extend these ideas to incorporate behavioral features and psychological traits displayed by the users.&lt;/p&gt;
+
+&lt;p&gt;Today, traffic shaping is a major area that deals with congestion control [84, 116]. The users are allocated bandwidth based on the choice of the monthly plans selected by them and the ambient network traffic conditions. One of our goals is to extend these ideas to real-time traffic management. For example, imagine you have a virtual presentation coming up. It would be nice to indicate this to the service provider, such as Xfinity or AT&amp;amp;T, and request a boost for this period. It might result in additional charges, but it would provide you the added benefit of choosing a more economical base plan. Certainly, re-engineering the Internet along these lines would increase user-system interactions and it would need algorithms that are more aware of human behavior and responses.&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud-computing-networks&quot;&gt;Cloud Computing Networks&lt;/h2&gt;
+
+&lt;p&gt;Just as communication networks allocate bandwidth to the users, cloud computing networks, such as Amazon Web Services, Microsoft Azure, or Google Cloud, provide on-demand com- puter system resources such as data storage and computing power. Cloud service providers can schedule most of the customer jobs instantly today as the resources exceed the demand. However, with a growing trend of customers opting for computing resources as a service instead of maintaining such systems on their own, this surplus luxury is not sustainable. Resources are also naturally constrained in settings such as fog computing and peer-to-peer computing networks. Besides, concerns over the energy consumption by data centers is another factor that limits the expansion of computing resources.&lt;/p&gt;
+
+&lt;p&gt;The demand for resources can vary significantly over time, different jobs have different resource requirements, and customers have varying preferences towards their job delays and the quality of service. The prices must conform to these changing demands in real-time. Although the typical customers in this setting are firms and organizations, the end-users of their services and products are often individual humans. The value and revenue gener- ation for these organizations is closely related to the levels of consumer satisfaction. As a result, behavioral considerations naturally creep into the utilities and preferences of these organizations.&lt;/p&gt;
+
+&lt;h2 id=&quot;energy-networks&quot;&gt;Energy Networks&lt;/h2&gt;
+
+&lt;p&gt;Smart grids are another excellent example of the application of digital processing and com- munications to systems where user interactions play a major role. The goal here is to improve the economic efficiency of electricity networks and maintain high levels of quality of supply by integrating the behavior and actions of all the users connected to the network - genera- tors, consumers, and those that do both. It would provide communication protocols to the suppliers and the consumers, allowing them to be more flexible and sophisticated in their operational strategies. For example, the suppliers could indicate their energy prices, and the consumers could indicate their willingness to pay in real-time. The users can configure smart devices to generate additional energy or initiate energy-saving modes under specific settings such as during high-cost peak usage periods. Similar to the pricing based on job delays in the cloud computing setting, we can imagine customers having different prefer- ences towards their energy requirements based on deadlines, for example, such requirements would naturally occur in charging of electric vehicles. Today, PG&amp;amp;E, a utility company that provides natural gas and electric service, offers different pricing schemes such as time-of-use rate plans and tiered usage rate plans. Along similar lines, we are interested in much more flexible and sophisticated pricing schemes based on dynamic market conditions and human behavior analysis. This would also benefit in incentivizing people to shift to clean electricity options and adopt solar panels at home.&lt;/p&gt;
+
+&lt;h2 id=&quot;social-networks&quot;&gt;Social Networks&lt;/h2&gt;
+
+&lt;p&gt;Several activities such as advertising, campaigning, or running welfare programs depend on the underlying social networks. Humans are the primary agents in any social network. Their interactions and behavior form an integral part in the study of social networks. Models that incorporate psychological aspects are needed to better allocate resources in these activities. It would help answer questions like: How can we maximize the impact of a campaign with a limited budget? How to best incentivize the agents in a network to perform actions that are in the best interests of the entire society?&lt;/p&gt;
+
+&lt;p&gt;From a commercial point of view, it would greatly benefit the online ad exchange com- panies such as Google Ads or Facebook Ads. These are digital marketplaces that enable advertisers to buy and sell advertising spaces. Here, user attention is the limited resource and the different advertisers are competing for this limited resource. The tools developed in this thesis will help regulate these markets more efficiently by incorporating human behavioral features.&lt;/p&gt;
+
+&lt;h2 id=&quot;matching-markets&quot;&gt;Matching Markets&lt;/h2&gt;
+
+&lt;p&gt;Just like the ad exchange marketplace, several other matching markets fall in this domain. These include labor markets that match employers and workers such as Upwork and Free- lancer, ride hailing applications that match drivers and riders such as Uber and Lyft, delivery services that match restaurants and diners such as Doordash and UberEats, or online mar- ketplaces that match sellers and buyers such as Amazon and eBay. Notice that most of the participating agents in these settings are individual humans susceptible to showing behavior that is influenced by biases and heuristics.&lt;/p&gt;
+
+&lt;h2 id=&quot;finance-and-insurance&quot;&gt;Finance and Insurance&lt;/h2&gt;
+
+&lt;p&gt;Finance and insurance is another interesting setting where behavioral factors play a huge role. There is a decent amount of work studying how individuals make decisions about their investment strategies and insurance policies, but there is only a limited amount of work that considers behavioral features in a financial network setting where the individuals interact with each other and their decisions affect the other individuals in the network. In this work, we establish results that would facilitate this research.&lt;/p&gt;
+
+&lt;p&gt;Observe that, in all the above examples, the following factors are common:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;The resources are limited.&lt;/li&gt;
+  &lt;li&gt;Players have varying requirements and preferences.&lt;/li&gt;
+  &lt;li&gt;The preferences of the players are private information.&lt;/li&gt;
+  &lt;li&gt;Players have limited information about the system operations and constraints. 5. Players show behavioral features.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;The goal is to design a communication protocol or a market system to fa- cilitate the exchange of information for strategic players who might display behavioral features, and consequently allocate resources to satisfy certain re- quirements. In contrast to prior works, we will pay special attention to the last factor, namely, the behavioral features of the players. We aim to bring these aspects to the same level of mathematical sophistication as other aspects in system sciences. Such an approach is crucial to building systems that are scalable across different users and robust to the intricacies of human behavior.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Introduction to Behavioral Network Economics</title>
+   <link href="https://sohamphade.github.io_site/intro_to_behavioral_net_econ/"/>
+   <updated>2021-05-10T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/intro-to-behavioral-net-econ</id>
+   <content type="html">&lt;p&gt;We will mainly be concerned with the study of social systems comprised of several individuals, typically humans, henceforth called players, interacting directly or indirectly in a bounded situation (or an environment). Systems influenced by technological innovations over the past several decades will be of particular interest to us. For example, these include transportation and communication networks, the Internet, computation networks and data-centers, energy and utility networks, financial networks, labor markets, social networks, and digital markets.&lt;/p&gt;
+
+&lt;p&gt;The complex nature of these systems requires consideration of several crucial aspects which gave rise to the interdisciplinary fields of cybernetics and systems science. These combine knowledge from various fields such as control theory, information theory, dynamical systems, operations research, computer science, systems engineering, economics, statistics, and psychology. The engineering approach towards solving these problems primarily focuses on the physical aspects such as feasibility, practicality, maintainability, stability, and scal- ability. An equally important dimension is that of catering to individual preferences and needs. Ultimately these systems are there for the users. Thus enters marketing research and business management. These fields study the market economy and business processes to identify, anticipate and satisfy customers’ needs and wants. A holistic approach that combines these two approaches will go a long way.&lt;/p&gt;
+
+&lt;p&gt;Technological advancements in domains such as the Internet, Computing, Communica- tion, and Artificial Intelligence (AI) have lead to rapidly evolving network services such as cloud computing, smart information systems, multimedia platforms, software companies, online marketplaces, and smart grids, that have global scopes. Consequently, network eco- nomics research evolved along two major lines:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Optimal routing and control: This involved the study of flow dynamics and congestion based on the underlying network structures and routing decisions. Typical problems studied include the shortest path problem, the maximum flow problem, the minimum cost flow problem, etc. (See books by Anna Nagurney [94, 95, 97, 98, 96].)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Network formation and growth: Here, the focus is on the understanding of the for- mation of network links, the flow of information in social networks or diseases in epi- demiological studies, connectivity and segregation in different networks, etc. Models from random graph theory and statistics are helpful in this approach. (See books by Mathew Jackson [62, 63] and Sanjeev Goyal [54].)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Besides understanding the working of networks, a fundamental goal of network economics is to assist decision-making for both the system designer and the players in the system. For example, Braess’ paradox warns a network planner of the following counter-intuitive effect: adding additional links to a network can reduce the overall system utility (such as the total delays for all the drivers in a transportation network) at Nash equilibrium when each player is making an optimal self-interested decision. Observations like these and results from network economics have greatly helped policy-making and system design. (Shapiro and Varian [122] describe strategies to guide business decisions and policies in network economies such as differential pricing, utilizing network positive externalities and lock-in effects, patents and rights management, and others.)&lt;/p&gt;
+
+&lt;p&gt;Game theory and economics offer valuable guiding principles in the design of these sys- tems. The economic models for studying these problems typically assume that the partic- ipating agents are rational and possess immense computational power (which is reasonable when the participating agents are firms or nations). However, for e-commerce platforms like social media and online marketplaces, where the participating agents are single individuals who perform several repeated short-lived interactions with the platform, it is unusual that these agents would adhere to the above behavioral assumptions. We cannot expect the human mind to make informed and well-thought decisions in such complex interconnected systems, let alone the stress it generates. Our goal here is to use sophisticated models from behavioral psychology and decision theory to model human interaction and design robust and scalable systems that would assist the users in making decisions that are in their own interests and also for those around them.&lt;/p&gt;
+
+&lt;p&gt;The digital revolution has given rise to software companies having massive control over several crucial networks with the power to micromanage them. The algorithms deployed by these companies can influence social, economic, and political networks like never before. Along with all the evident benefits of these software systems in automating tasks and facil- itating large-scale network operations, we must pay closer attention to how these systems interact with their users. The growing human-computer interaction requires careful con- sideration of human behavior and their emotional responses. Our knowledge regarding the guiding principles for governing these interactions is quite limited, and a methodological approach towards incorporating psychological aspects into system design is barely off the ground. There is an ongoing debate relating to the benefits of these big technology com- panies, the extreme power these companies hold, and whether they are using it wisely or not. Although it will not be the focus of this thesis, I hope that the behavioral foundations developed in this work would help answer some of these questions (see Section 7.3), and consequently, help build systems that are better aware of human behavior and needs.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;&quot;Perhaps the most apt historical model for algorithmic regulation is not trust- busting, but environmental protection. To improve the ecology around a river, it isn’t enough to simply regulate companies pollution. Nor will it help to just break up the polluting companies. You need to think about how the river is used by citizens—what sort of residential buildings are constructed along the banks, what is transported up and down the river—and the fish that swim in the water. Fishermen, yachtsmen, ecologists, property developers, and area residents all need a say. Apply that metaphor to the online world: Politicians, citizen- scientists, activists, and ordinary people will all have to work together to co- govern a technology whose impact is dependent on everyone’s behavior, and that will be as integral to our lives and our economies as rivers once were to the emergence of early civilizations.&quot; &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;—Anne Applebaum, &lt;cite&gt;“The Internet doesn’t have to be awful.” The Atlantic. April 2021.&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Three pillars of E-Commerce?</title>
+   <link href="https://sohamphade.github.io_site/gt_ecommerce/"/>
+   <updated>2021-01-17T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/GT-ECommerce</id>
+   <content type="html">&lt;p&gt;E-commerce applications have enabled economic aspects 
+– such as production, distribution, and consumption of goods and services – 
+to permeate our social fabric to an extent never seen before. 
+The task ahead is to bring some of the old principles from social sciences like economics and psychology, with suitable modifications, 
+into the modern digital world of algorithms and technology. 
+In this post, I will expand on a theoretical approach
+that I believe can provide new insights in this regard.&lt;/p&gt;
+
+&lt;p&gt;E-commerce has not only brought the physical world to our doorstep and into our palms, but it has also vastly expanded the arena for social interactions. 
+Think of any platform like Amazon, Facebook, or Youtube. 
+You can do almost anything with just a few clicks. You can interact with several other individuals, exchange ideas, 
+perform transactions, run your businesses, or cultivate your passions. The possibilities are unlimited.&lt;/p&gt;
+
+&lt;p&gt;The smooth functioning of these systems is essential. 
+On the systems side, we have tasks such as inventory management and supply chain logistics. 
+It requires creating and maintaining the website, platform services, and other operations that would scale as per the need. 
+We have extensive infrastructures built for them that have been rapidly evolving over the past few decades. 
+On the other hand, we have a massive industry catered towards marketing and maintaining customer relations, 
+with a growing trend for using algorithms and social media networks to target customers.&lt;/p&gt;
+
+&lt;p&gt;Equally important is the interaction between the system and its users. 
+A basic example of such is the search engine. 
+Imagine how hard it would be to find some website over the Internet, view a particular video on Youtube, or purchase an item over Amazon without a well-functioning search engine.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The first stage&lt;/strong&gt; of interaction involves assisting the users to reach their most favorable option(s). 
+Let’s say each user has a &lt;em&gt;type&lt;/em&gt; that describes her intent (or maybe, just the fact that there are no intentions and she is open to suggestions). 
+(I have purposely used the word “type” here because, later, 
+I will put this in the technical framework of mechanism design, where it is common to assume that the players have types.) 
+This first stage varies from being passive to aggressive. 
+The passiveness comes from it seeking to learn the user’s preferences. 
+And the aggressiveness comes from it attempting to alter the user’s intentions. 
+A simple phone directory is an example of a passive search assistant. 
+On the other hand, the news feeds on social media or the video recommendations on YouTube are strong influencers and are much more aggressive. 
+Usual gadgets like recommendation systems, search suggestions, and advertisements often lie somewhere on this scale based on their design.&lt;/p&gt;
+
+&lt;p&gt;No doubt this is a powerful mode of interaction, and we must ask ourselves the following question: 
+What are its objectives and what are its effects on the system, and, in particular, on the users of this system? 
+It affects the way we think, the things we believe, and the way we behave. 
+There is a growing awareness of this effect, 
+and many amongst us would agree that we can no more ignore these effects. 
+It is time to bring in the lessons learned over centuries through real-world interactions into the world of the web. 
+It is a loaded task with several people working on it. 
+Studying the purpose and the effect of these systems systematically will help shed some light in this direction. 
+It will help improve the design of these systems.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The next stage&lt;/strong&gt; is to decide who gets what. 
+Resources are limited! 
+(On a philosophical note, I believe it is one of the defining facts of our lives, 
+the underlying reason for why we do most of the things we do the way we do it.) 
+Coming back to our e-commerce platforms, consider something like Amazon. 
+The number of items available for sale is limited. 
+The resources available for shipping are scarce. 
+Network bandwidth is bounded. 
+Cloud storage and computing resources are limited. 
+With these limitations, the system has to allocate resources according to the different preferences of its customers.&lt;/p&gt;
+
+&lt;p&gt;To achieve this task, we need to design a protocol for the people to signal how badly they intend to receive the resources. 
+When kids fight over an item, the one who makes the most noise generally gets it. 
+You make them put in efforts to gauge how badly they need the resources. 
+Similarly, for elders, a commonly employed method is to make them pay — the more they are willing to pay, the more they want it. 
+Another approach is to make the users put in efforts like waiting in a queue or tolerate being hammered by advertisements.&lt;/p&gt;
+
+&lt;p&gt;On the topic of advertisements, it is interesting to look at the ad-supported platforms like Youtube, Facebook, or Google in an inverted form. 
+Here, the users are the ones who have limited attention spans, and the software is trying to feed them with a maximum number of adverts with the most targeted influence. 
+Notice that the advertisers are the customers in this case, who are ready to pay for the limited valuable resource, namely, the users’ attention.&lt;/p&gt;
+
+&lt;p&gt;The best way to execute this stage is to provide the customers with their most desired options with varying charges based on the market demand. 
+A simple example is that of Uber giving different service options to its customers at varying prices. 
+Amazon provides multiple delivery options with varying charges. Just as recommendations were a logical answer for the vastness of search, pricing/effort extraction is a natural way to allocate resources amongst competing entities.&lt;/p&gt;
+
+&lt;p&gt;These pricing strategies affect the revenue of the company. 
+They also determine the customer-company relations. 
+A better understanding of the customers’ behavioral responses will go a long way in designing these systems. 
+Several answers to this study will come from economics and game theory. 
+(See &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;Behavior-Aware System Design&lt;/a&gt; post for further discussion on this.)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The final stage&lt;/strong&gt; is that of incorporating feedback. 
+It includes operations like keeping track of user actions, choices, responses, and ratings; collecting and processing this data. 
+The digital revolution and the emergence of companies with billions of users have made it possible to collect this data at relatively low costs. If used correctly, we can certainly benefit from it. 
+It will help improve the effectiveness of the previous two stages.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;https://sohamphade.github.io/_site/assets/3_pillars.png&quot; alt=&quot;3_pillars_of_ecommerce&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;All this might sound similar to several articles over the Internet trumpeting cool ideas in the form of mantras or principles. 
+But the question that I am interested in is whether we can translate these ideas into a proper working model that can be analyzed mathematically.&lt;/p&gt;
+
+&lt;p&gt;Why should we do this? Although intuition and ideas are great, they are often just the first step. 
+Consider the example of constructing a bridge. 
+Maybe we can build a small one across a creek using intuition and ideas. 
+But to create something magnificent like the Golden Gate Bridge, we need some serious engineering tools based on concrete mathematical theories. 
+We need to account for several factors such as the strength requirements, the weather conditions, 
+and the soil composition to determine the materials to be used, the building’s architecture, and the construction method.&lt;/p&gt;
+
+&lt;p&gt;The same holds for any engineering task. 
+As the scale grows, the task becomes more and more complicated, and it becomes imperative to have a well-established set of assumptions and objectives to execute these tasks. 
+For example, once we know what we expect from the bridge, like the amount of traffic that is supposed to pass every day, the kind of maintenance that is feasible, and the expected life span of the bridge, then, 
+using mathematical models that are based on scientific laws, we can build a working model to proceed.&lt;/p&gt;
+
+&lt;p&gt;Theory alone certainly cannot answer everything. Here is an excerpt from Roth and Peranson (1999) that wonderfully explains this:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Consider the design of suspension bridges. The Newtonian physics they embody is beautiful both in mathematics and in steel, and college students can be taught to derive the curves that describe the shape of the supporting cables. But no bridge could be built based only on this elegant theoretical treatment, in which the only force is gravity, and all beams are perfectly rigid. Real bridges are built of steel and rest on rock and soil and water, and so bridge design also concerns metal fatigue, soil mechanics, and the forces of waves and wind. Many design questions concerning these real-world complications cannot be answered analytically but, instead, must be explored using physical or computational models. Often these involve estimating magnitudes of phenomena missing from the simple Newtonian model, some of which are small enough to be of little consequence, while others will cause the bridge to fall down if not adequately addressed. Just as no suspension bridges could be built without an understanding of the underlying physics, neither could any be built without understanding many additional features, also physical in nature, but more varied and complex than addressed by the simple model. These additional features, and how they are related to and interact with that part of the physics captured by the simple model, are the concern of the scientific literature of engineering. Some of this is less elegant than the Newtonian model, but it is what makes bridges stand. Just as important, it allows bridges designed on the same basic Newtonian model to be built longer, stronger, and lighter over time, as the complexities and how to deal with them become better understood.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For our task of building reliable e-commerce applications, 
+we have sophisticated models to study some of the components of this system. 
+Thanks to the engineering sciences, we know a lot about the software and the hardware side of the problem. 
+However, we are still missing a vital component, namely the human aspect. 
+In all these applications, human interaction with the platform is a prime factor. It not only affects the future of that e-commerce application but also has a significant impact on society. Any theory-based approach towards designing these systems must be qualified to account for it.&lt;/p&gt;
+
+&lt;figure&gt;
+    &lt;blockquote&gt;
+        &lt;p&gt;&quot;Game theory can be defined as the study of mathematical models of conflict and cooperation between intelligent rational decision-makers.&quot; &lt;/p&gt;
+    &lt;/blockquote&gt;
+    &lt;figcaption&gt;—Roger B. Myerson, &lt;cite&gt;Game Theory - Analysis of Conflict&lt;/cite&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;This is where game theory and economics come into the picture.&lt;br /&gt;
+&lt;strong&gt;Mechanism design&lt;/strong&gt;, which is often called the engineering side of game theory, is just what we need. 
+To give a very crude description of the basic premise of mechanism design, say you have some participants. 
+Think of them as the users for whom we are designing the system. Each of these participants is assumed to have a specific type that describes their needs, behavior, and intentions. 
+The system operator has a bunch of options that it can execute given the resource constraints. 
+However, it does not know the individual types of participants. It can set up a game scenario, where the participants interact strategically with each other resulting in an equilibrium outcome depending on the appropriate equilibrium notion. 
+The mechanism designer’s objective is to produce the equilibrium outcome that satisfies some desired characteristics conditioned on the types of the participants, even without directly observing the types of the participants.&lt;/p&gt;
+
+&lt;p&gt;The most commonly known example of mechanism design is an auction. Imagine an auction house. 
+Different participants have different valuations for the art piece. 
+This valuation information is a part of their types. You wish to assign the item to the person who values it the most and subsequently extract the maximum possible price. 
+The mechanism design that achieves such a task is the bidding protocol. 
+Making the participates bid strategically to win the item at the lowest possible price not only makes them reveal information about their valuations but also allows the auctioneer to sell the item to the bidder who values it the most and correspondingly get a better price for the item.&lt;/p&gt;
+
+&lt;p&gt;Different bidding protocols have different features. 
+The mechanism design framework allows us to study these features systematically. 
+For example, if we have certain beliefs about the valuations of the participants, then &lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/moor.6.1.58&quot;&gt;Myerson’s optimal auction&lt;/a&gt; provides a way to design a mechanism that maximizes the revenue. 
+If you want each participant to report her valuation truthfully and assign the item to the highest bidder, then one must use the &lt;a href=&quot;https://en.wikipedia.org/wiki/Vickrey–Clarke–Groves_auction&quot;&gt;Vickrey-Clarke-Groves auction&lt;/a&gt;, which takes the form of a second-price sealed-bid auction in this case. 
+Dutch auction and English auction are other examples. 
+The 2020 Economics Nobel Memorial Prize was awarded to Robert B. Wilson and Paul Milgrom for their work on auction theory. It played a crucial role in the design of F.C.C. spectrum auctions.&lt;/p&gt;
+
+&lt;p&gt;Let us look at another example. 
+Imagine a car riding service like Uber. 
+Different riders have different requirements depending on their preferences and purpose of travel. 
+For someone who is going to the airport to catch a flight, she will assign a lot of importance to her arrival time. 
+Someone else who is not in a hurry might want the cheapest option and be ready to share her ride. 
+Let us club all these preferences into the different types of users. 
+Now the platform’s task is to assign rides to different users along with the routes to satisfy certain goals. 
+These goals could be something like getting each individual the best service possible depending on her preferences, raising the maximum revenue possible, allocating resources in an environment-friendly manner allowing for maximum sharing as possible, or some combination of these different goals.&lt;/p&gt;
+
+&lt;p&gt;Intuitively, we know that we should show multiple options to the riders with corresponding prices and let them select what they like. 
+This constitutes the first two stages. 
+In the first stage, you present the best options available based on the information provided by each customer, like destination, estimated time of arrival, number of passengers, etc. 
+Then, in the second stage, you identify how badly each individual wants their preferences to be satisfied by asking them to pay for the services accordingly.
+Having realized this, is there some way we can construct these options systematically and then based on the users’ selections assign appropriate resources? 
+Can theory help us answer this question and subsequently design algorithms with some quantitative guarantees?&lt;/p&gt;
+
+&lt;p&gt;To some extent, the role of any mechanism is to provide a communication protocol through which the users’ choices and actions can be coordinated. 
+Now, in general, one could imagine a countless number of different communication schemes. 
+So, where does one start to search for the so-called optimal mechanism? Fortunately, the theory of mechanism design offers some reassurance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Revelation principle&lt;/strong&gt;, one of the most fascinating results from mechanism design, roughly says that if you can design a communication protocol that has certain features under strategic play, 
+then there exists an equivalent direct mechanism, where you ask each user to simply state its type and allocate resources so that the resulting protocol under strategic play has the same features. 
+Think of the second-price sealed-bid auction. 
+Each person submits a sealed bid for the auction item, and the person with the highest bid wins the item and pays the amount equal to the second-highest bid. 
+The nice feature about this protocol is that it is in the best interest of each person to report her true valuation. 
+All direct mechanisms have this property. 
+The revelation principle says that you can restrict your attention to such direct mechanisms without loss of generality.&lt;/p&gt;
+
+&lt;p&gt;To put this in the context of our three-stage structure, it seems that a direct mechanism only consists of the second stage, 
+where each user is presented with a list of options, one corresponding to each of her types, with corresponding outcomes and prices, and the user chooses one amongst them that best suits her. 
+This is the one that corresponds to her type. So the revelation principle seems to suggest that it is enough to construct platforms with just the second stage.
+But there are several problems with this reasoning as you might have guessed.&lt;/p&gt;
+
+&lt;p&gt;For instance, the number of possible types could be very large, and it is not feasible to present each user with an option corresponding to each type. 
+In the case of Amazon, this would mean presenting each customer with all the items available to shop on the platform. 
+This suggests why we need the first stage. 
+But this is not the only reason. 
+It turns out that there are certain other benefits in executing the first stage, especially when the users display human-like characteristics in their decision-making.&lt;/p&gt;
+
+&lt;p&gt;The revelation principle holds under fairly general settings provided that the participants’ preferences follow the predictions of expected utility theory. 
+It is common to employ the concept of utility functions, central to economics theory, to capture the notion of preferences for the users. 
+Expected utility theory extends these preferences to account for uncertainties, coming possibly from beliefs or other intrinsic sources of randomness present in the system.&lt;/p&gt;
+
+&lt;p&gt;It has been observed that human beings often do not behave according to expected utility theory. 
+They often exhibit systematic deviations in their behavior and decision-making. 
+Behavioral economics seeks to provide a better understanding of this phenomenon. 
+Several books and articles have been written that cover the descriptive and prescriptive nature of human behavior.&lt;br /&gt;
+It is especially important in the context of e-commerce applications, where people interact with the platform as part of their day-to-day lives. 
+As a result, they tend to show more behavioral traits in such interactions.&lt;/p&gt;
+
+&lt;p&gt;From a theory point of view, &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_prospect_theory&quot;&gt;cumulative prospect theory&lt;/a&gt;, a leading theory for decision-making under uncertainty (another Nobel prize winning work), proposed by Daniel Kahneman and Amos Tversky, is especially useful. It has a nice mathematical formulation and accounts for several behavioral aspects in a unified form. 
+It tells you how each person evaluates different outcome scenarios under uncertainty.&lt;/p&gt;
+
+&lt;p&gt;Working on mechanism design with cumulative prospect theory instead of expected utility theory, one quickly realizes that the revelation principle does not hold anymore. 
+This is a big deal. 
+There are several reasons why we want something like the revelation principle to hold. 
+One of the reasons as mentioned earlier was to simplify the search over all the possible communication protocols. 
+Another reason is that the direct mechanisms are inherently nice from a strategic behavior point of view. 
+In particular, the optimal strategy for each person is simple — report her type. This is important because many times the participants do not have a complete picture of the system at their disposal. 
+Even if they have access to it, they do not possess the necessary computation power. 
+This is typical of the e-commerce platforms that we are interested in. 
+The participants come in all sizes varying in their computational power. 
+The nice thing about direct mechanisms is that it is easy for the small participants to act optimally (although they might not understand completely why it is optimal), and the large participants even with all their extra abilities cannot do any better.&lt;/p&gt;
+
+&lt;p&gt;In our paper, we establish that by introducing a stage similar to the first stage above, we can recover a form of the revelation principle even under the behavioral setting of cumulative prospect theory. 
+In this stage, the system oprator acts as a mediator and sends signals to all the participating agents.
+These signals perform two main functions: it allows us to simplify the options shown to the users and it also allows us to align the participants beliefs. 
+These properties come up naturally from our framework that we call the &lt;strong&gt;mediated mechanism design&lt;/strong&gt;. (See &lt;a href=&quot;https://arxiv.org/abs/2101.08722&quot;&gt;this&lt;/a&gt;, for further details.)&lt;/p&gt;
+
+&lt;p&gt;The first property concerns the operability of the system. Since the interacting agents are human beings, we want to make the communication protocol in the first two stages as accessible as possible.
+Just like driving a car is made accessible by giving as few controls to the driver as possible, but still maintaining a strong and complex engine, the first stage allows us to construct e-commerce applications similarly. Namely, we want a strong theory that will enable us to build a robust mechanism, and at the same time make it accessible without losing its integral parts.&lt;/p&gt;
+
+&lt;p&gt;The second property is closely related to the &lt;a href=&quot;https://en.wikipedia.org/wiki/Nudge_theory&quot;&gt;nudge theory&lt;/a&gt; (yet another incredible contribution to behavioral economics that won the Nobel prize). It is important to realize that the first stage has the power to influence the beliefs of the user and also her type. This is the aggressive part of the first stage.&lt;/p&gt;
+
+&lt;p&gt;Is it a bad thing? That depends on what is the purpose of the nudge. 
+To make it clear, the sort of nudge we are interested in our paper is restricted to be truthful in nature.
+Even then it is quite a powerful tool.
+Although some might consider using misinformation, it often creates more problems than it intends to solve.
+With a behavioral model at our disposal, we can better understand its influence and tell when something is harmful and not acceptable. 
+It could suggest ways to improve the design of these mechanisms, both qualitatively and quantitatively. 
+In my opinion, that is the purpose of any theory. 
+Certainly, it will not be able to answer everything, but it is like the bridge example I mentioned above. 
+Once we have a strong starting model to discuss and analyze the problem, we can start incorporating other more complex effects.&lt;/p&gt;
+
+&lt;p&gt;This brings us to the last stage, which takes the previous implementations of the mechanism and tries to improve it for the future. 
+Most of the user interactions with the platform are of a repeated nature. 
+This makes it possible to learn from previous interactions and improve the performance of the mechanism. 
+These include several popular approaches from machine learning and reinforcement learning. 
+Once we have decided the structure of our mechanism, like to sort of communications to employ, based on a better understanding of the underlying assumptions and objectives, we can then use data-driven techniques to optimize these designs.&lt;/p&gt;
+
+&lt;p&gt;Most of the technological developments that we see today are dominated by this third stage. 
+The design of the first two stages is often taken for granted by assuming them to be something either observed, or seemingly intuitive, or based on trial and error. This approach is fast and often gets the job done. 
+However, if we want to answer questions like the objectives and impacts of these mechanisms such as social impact, fairness, sustainability, environment-friendliness, and health-related concerns in a concrete manner, approaches based on well-defined theories stand a better chance of doing it.&lt;/p&gt;
+
+&lt;p&gt;Incorporating game theory in the design of e-commerce applications would allow us to give guarantees about the structure of our mechanism, systematically study its purpose and effects on society, and thus build better long-lasting systems.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Game Theory and Market Design when Agents have Cumulative Prospect Theory Preferences</title>
+   <link href="https://sohamphade.github.io_site/cptgames/"/>
+   <updated>2020-11-09T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/CPTGames</id>
+   <content type="html">&lt;p&gt;In this project, we systematically study game-theoretic settings (in particular, non-cooperative games) when the players’ preferences are modeled using &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_prospect_theory&quot;&gt;cumulative prospect theory (CPT)&lt;/a&gt;.
+CPT is a generalization of expected utility theory (EUT) and one of the leading decision theories to model human preferences when faced with uncertainty. It was proposed by &lt;a href=&quot;https://en.wikipedia.org/wiki/Daniel_Kahneman&quot;&gt;Daniel Kahneman&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Amos_Tversky&quot;&gt;Amos Tversky&lt;/a&gt; for which Kahneman received the &lt;a href=&quot;https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/&quot;&gt;Nobel Memorial Prize in Economic Sciences&lt;/a&gt;. 
+There has been a growing discussion concerning the benefits (and limits) of using CPT in game theory and economics. 
+In fact, in the &lt;a href=&quot;https://authors.library.caltech.edu/80314/&quot;&gt;paper&lt;/a&gt; “Prospect theory in the wild: Evidence from the field”, &lt;a href=&quot;https://en.wikipedia.org/wiki/Colin_Camerer&quot;&gt;Colin F. Camerer&lt;/a&gt; concludes:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;“there is no good scientific reason why it (prospect theory) should not replace expected utility in current research, and be given prominent space in economics textbooks.”&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What better place to begin this endeavor than to study the notions of equilibrium that have been central to game theory and economic analysis!
+In our &lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/deca.2018.0378?casa_token=VFyCgbBb3GUAAAAA:_ZSTZZMeUPrjrEpwSSAuQ-OT_ujm2xyDzaM_XApEUKUQX2MYZMbu4Xxlw7M18VG8ityON1PeXQ&quot;&gt;paper&lt;/a&gt; titled “On the Geometry of Nash and Correlated Equilibria with CPT Preferences”, we take the notions of CPT Nash equilibrium and CPT correlated equilibrium defined by &lt;a href=&quot;https://sites.google.com/site/kerimkeskin&quot;&gt;Kerim Keskin&lt;/a&gt; as our starting point and establish several geometric properties of these equilibrium notions. 
+We explore questions such as the convexity and the connectivity properties of the correlated equilibria set, and the relation between the Nash equilibria and the correlated equilibria. 
+For example, under EUT, it was known that the set of all correlated equilibria is a convex polytope. 
+Keskin (2016) showed that this property need not hold under CPT. 
+We prove that it can, in fact, be disconnected (if you are curious, check out the construction of an example in section 4 of the &lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/deca.2018.0378?casa_token=VFyCgbBb3GUAAAAA:_ZSTZZMeUPrjrEpwSSAuQ-OT_ujm2xyDzaM_XApEUKUQX2MYZMbu4Xxlw7M18VG8ityON1PeXQ&quot;&gt;paper&lt;/a&gt;).
+Nonetheless, certain properties like the Nash equilibria all lying on the boundary of the correlated equilibria set (proved by Nau et al. (2004)) continues to hold true,
+although they require new proof techniques.&lt;/p&gt;
+
+&lt;p&gt;These new theoretical phenomena bring out some of the important distinctions resulting from CPT modeling.
+They have practical implications for the design of experiments for learning the unknown game structures.
+For example, in modern online advertising, the internal working of the ad-placement algorithms is typically unknown to the customers. 
+Knowledge about the structure of the equilibria, especially under presumably more accurate behavioral models, would benefit the design of experiments and simulations.
+They can also help in suggesting system improvements or policy changes such as advertising strategies, cybersecurity, or military tactics – &lt;em&gt;like &lt;a href=&quot;https://en.wikipedia.org/wiki/WarGame&quot;&gt;WOPR from WarGames&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
+
+&lt;!-- 
+| ![wargames movie image](https://sohamphade.github.io/_site/assets/wargames.jpg) | 
+|:--:| 
+| *Space* |
+---&gt;
+
+&lt;!--
+&lt;figure&gt;
+  &lt;img src=&quot;https://sohamphade.github.io/_site/assets/wargames.jpg&quot; alt=&quot;my alt text&quot;/&gt;
+  &lt;figcaption&gt;The fictional US military supercomputer, War Operation Plan Response (WOPR), was programmed to simulate the possible outcomes of a nuclear war.&lt;/figcaption&gt;
+&lt;/figure&gt;
+---&gt;
+
+&lt;p&gt;Building on this, we consider the setting of learning in repeated games in the &lt;a href=&quot;https://arxiv.org/abs/1804.08005&quot;&gt;paper&lt;/a&gt; “Learning in Games with Cumulative Prospect Theoretic Players”. 
+The literature on learning in games provides an alternative explanation to the equilibrium notions as a long-run outcome in repeated games with mild rationality assumptions on the players. 
+They are especially important from a behavioral perspective where players have limited computational powers.
+We consider the &lt;a href=&quot;https://www.amazon.science/latest-news/amazon-economist-test-of-time-award-acm-conference-economics-computation&quot;&gt;celebrated theorem&lt;/a&gt; of &lt;a href=&quot;https://www.sciencedirect.com/science/article/abs/pii/S0899825697905959&quot;&gt;Rakesh Vohra and Dean Foster&lt;/a&gt; on the convergence of the empirical average of the action play to the set of correlated equilibria when players make calibrated forecasts and respond with myopically optimal actions.
+One soon realizes that the notion of CPT correlated equilibrium, as defined by Keskin, is not enough to capture this result.
+But instead, we need an appropriate convexification of this set that we call the mediated CPT correlated equilibrium.&lt;/p&gt;
+
+&lt;p&gt;In a correlated equilibrium, the mediator is assumed to recommend an action to each player to play.
+We introduce the notion of mediated games in which the mediator is allowed to send signals from more general sets.
+This is a specific type of game with communication as introduced by &lt;a href=&quot;https://en.wikipedia.org/wiki/Roger_Myerson&quot;&gt;Myerson&lt;/a&gt;.
+The mediated CPT correlated equilibria are then the Bayes-Nash equilibria of this mediated game.
+Since the mediated CPT correlated equilibria are more general than the CPT correlated equilibria we get that the revelation principle in the context of correlated equilibria does not hold under CPT preferences.&lt;/p&gt;
+
+&lt;p&gt;Calibrated learning is one form of learning in games.
+More generally, the result on the convergence to correlated equilibria is closely related to the notion of no-regret learning in games.
+We prove that the set of CPT correlated equilibria is not approachable in the Blackwell approachability sense.
+These results strongly suggest that the notion of mediated CPT correlated equilibrium is the appropriate notion to consider in this context.&lt;/p&gt;
+
+&lt;p&gt;A major revelation in the previous study is that: &lt;strong&gt;The Revelation Principle Fails under CPT!&lt;/strong&gt;
+A natural question is what happens in mechanism design where the revelation principle has played a fundamental role.
+As suspected we observe that the revelation principle fails in mechanism design when agents have CPT preferences.
+In the &lt;a href=&quot;https://arxiv.org/abs/2101.08722&quot;&gt;paper&lt;/a&gt; “Mechanism Design for CPT Agents: A General Framework and the Revelation Principle”, we develop an appropriate framework that we call mediated mechanism design that allows us to recover the revelation principle under certain settings.&lt;/p&gt;
+
+&lt;p&gt;The premise of a typical mechanism design scenario comprises a bunch of agents each having a private type consisting of their private information and preferences over the outcomes.
+There is a system operator (or a principal) who controls the implementations in the system but cannot directly observe the private types of players.
+To achieve optimal implementations conditioned on the types of the players, the system operator designs a communication protocol where the players can interact strategically in the resulting game.
+This allows the system operator to elicit information about the private types of the players.
+As an example, think of auctions.
+The &lt;a href=&quot;https://en.wikipedia.org/wiki/Vickrey_auction&quot;&gt;second-price sealed-bid auctions&lt;/a&gt; incentivize the players to reveal their private values truthfully, and the item is allocated to the player with the highest value at the second-highest bid.&lt;/p&gt;
+
+&lt;p&gt;For a modern application, consider ride-hailing services such as Uber or Lyft.
+These apps present the customers with several options such as premium rides, shared rides, economy rides, etc.
+The purpose of these options is to elicit the preferences of the customers and provide optimal services.
+These systems have inherent uncertainties, and it is essential to account for the customers’ behavior towards such uncertainties.
+The CPT-based analysis reveals that if we add a stage where each customer is sent a private message before she makes her option selection, then we can get improved results.
+For example, these messages could take the form of selecting a customer at random to receive priority service or discounted pricing.
+Such messages play the role of nudges that help in aligning the beliefs of the players for optimal service provisioning.&lt;/p&gt;
+
+&lt;p&gt;We already observe such &lt;a href=&quot;https://en.wikipedia.org/wiki/Nudge_theory&quot;&gt;nudges&lt;/a&gt; and incentives being used around us. 
+But a theory explaining these practices is still in an infant stage.
+Our mediated mechanism design framework is a very promising direction at explaining these observations theoretically and improving the design of these systems.
+Mechanism design is commonly referred to as the engineering side of game theory. These theoretical and methodological results can have substantial implications for the design of &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;behavior-aware systems&lt;/a&gt; such as online marketplaces and social networks.&lt;/p&gt;
+
+&lt;p&gt;There is an important common thread that runs through each of the above studies.
+CPT preferences do not satisfy something called the betweenness property.
+To understand this, let us consider a thought experiment.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Suppose you are presented with two lotteries:&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;p&gt;You win $20,000 with a 34% chance and nothing with a 66% chance.&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;You win $30,000 with a 17% chance and nothing with an 83% chance.&lt;/p&gt;
+
+      &lt;p&gt;Which lottery would you choose?&lt;/p&gt;
+
+      &lt;p&gt;Now consider the following third lottery:&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;You win $30,000 with a 1% chance, $20,000 with a 32% chance, and nothing with a 67% chance.&lt;/p&gt;
+
+      &lt;p&gt;Would you prefer this lottery over the previous two lotteries?&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Most people strictly prefer lottery 1 over lottery 2. But when asked about lottery 3, they choose it over the previous two lotteries. Now notice that lottery 3 can be thought of as a compound lottery of lottery 1 and lottery 2. Suppose you receive lottery 1 with a 16 in 17 chance and lottery 2 with a 1 in 17 chance. Then the compound lottery, if reduced to a single lottery, is exactly lottery 3.
+Thus we observe that people might prefer to actively randomize over their options.
+In the above setting, lottery 1 is a less risky gamble with a lower reward, and lottery 2 is a more risky gamble with a higher reward.
+A risk-averse person would typically thus prefer lottery 1 over lottery 2.
+However, when considering lottery 3, this person still perceives it to be low risk but is lured towards the 1% chance of winning a higher reward.
+This explains the desire to go for lottery 3.&lt;/p&gt;
+
+&lt;p&gt;The nice thing about CPT preferences is that it neatly captures this effect through the probability weighting functions that overweight small percentages.
+Building upon the idea that the players might prefer to actively randomize over their actions, we consider mixed strategies in non-cooperative games from a new perspective.
+We refer to such actively mixed-strategies as black-box strategies.&lt;/p&gt;
+
+&lt;p&gt;Traditionally, mixed actions have been considered from two viewpoints, especially in the context of mixed-action Nash equilibrium. According to the first viewpoint, these are conscious randomizations by the players – each player only knows her mixed-action and not its pure realization. The notion of black-box strategies captures this interpretation of mixed-actions. According to the other viewpoint, players do not randomize, and each player chooses some definite action. 
+But the other players need not know which one and the mixture represents their uncertainty, i.e., their conjecture about her choice.&lt;/p&gt;
+
+&lt;p&gt;Under CPT, these two interpretations get nicely untangled, and we get four different concepts of Nash equilibria depending on whether we allow randomization in each of the interpretations.
+In the &lt;a href=&quot;https://arxiv.org/abs/2004.09592&quot;&gt;paper&lt;/a&gt; titled “Black-box Strategies and Equilibrium for CPT Players”, we develop these four notions and study their properties such as existence and relation to each other.&lt;/p&gt;
+
+&lt;p&gt;Cumulative Prospect Theory has several insights to offer. We must explore these theoretical ideas along with the experimental advances in behavioral game theory. 
+We are at a fascinating juncture in this field, where theory and practice can assist each other in achieving something remarkable!&lt;/p&gt;
+
+&lt;h3 id=&quot;further-reading&quot;&gt;Further Reading&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Camerer, C. F. (1998). Prospect theory in the wild: Evidence from the field.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Keskin K (2016) Equilibrium notions for agents with cumulative prospect theory preferences. &lt;em&gt;Decision Analysis&lt;/em&gt;. 13(3):192-208.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phade, S. R., &amp;amp; Anantharam, V. (2019). On the geometry of Nash and correlated equilibria with cumulative prospect theoretic preferences. &lt;em&gt;Decision Analysis&lt;/em&gt;, 16(2), 142-156.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Nau R, Canovas SG, Hansen P (2004) On the Geometry of Nash equilibria and correlated equilibria. &lt;em&gt;Internat. J. Game Theory&lt;/em&gt; 32(4):443-453.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Foster, D. P., &amp;amp; Vohra, R. V. (1997). Calibrated learning and correlated equilibrium. &lt;em&gt;Games and Economic Behavior&lt;/em&gt;, 21(1-2), 40.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Hart, S., &amp;amp; Mas‐Colell, A. (2000). A simple adaptive procedure leading to correlated equilibrium. &lt;em&gt;Econometrica&lt;/em&gt;, 68(5), 1127-1150.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Fudenberg, D., Drew, F., Levine, D. K., &amp;amp; Levine, D. K. (1998). &lt;em&gt;The theory of learning in games&lt;/em&gt; (Vol. 2). MIT press.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phade, S. R., &amp;amp; Anantharam, V. (2018). Learning in Games with Cumulative Prospect Theoretic Preferences. &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:1804.08005.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Myerson, R. B. (2013). &lt;em&gt;Game theory&lt;/em&gt;. Harvard university press.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Aumann, R., &amp;amp; Brandenburger, A. (1995). Epistemic conditions for Nash equilibrium. &lt;em&gt;Econometrica: Journal of the Econometric Society&lt;/em&gt;, 1161-1180.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Phade, S. R., &amp;amp; Anantharam, V. (2020). Black-Box Strategies and Equilibrium for Games with Cumulative Prospect Theoretic Players. &lt;em&gt;arXiv preprint&lt;/em&gt; arXiv:2004.09592.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Behavior-Aware System Design</title>
+   <link href="https://sohamphade.github.io_site/basd/"/>
+   <updated>2020-11-05T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/BASD</id>
+   <content type="html">&lt;p&gt;The recent decades have been marked by extensive technological advancements in domains such as Internet, Computing, Communication, and Artificial Intelligence.
+These have lead to rapidly evolving technolgies such as cloud computing, automated services, communication platforms, big data software companies, and online marketplaces, that have become an integral part of our daily lives.&lt;/p&gt;
+
+&lt;p&gt;Our focus in the development of these technologies has essentially been at making them work efficiently.
+For example, enormous engineering efforts have been directed towards the development of high speed communication tools, compact processing devices, large scale database deployments, and power efficient systems.&lt;/p&gt;
+
+&lt;p&gt;Only recently have we started paying closer attention to the way these systems interact with their users.
+Although we are employing techniques such as geotargeting and personalized recommendations, a great deal remains yet to be undertood, especially, from the point of view of the correct guiding principles that would govern these human-computer interactions.
+For example, I believe social welfare and efficient resource allocation should play a 
+key role in the next stage of development of these technologies, 
+and these principles should certainly dominate than other metrics such as revenue generation or customer engagement.&lt;/p&gt;
+
+&lt;p&gt;Several people have raised alarms towards the perils of social media with a huge ongoing debate regarding the correct usgae of these technologies, and the ethical responsibilities of the giant tech companines.
+I am not going to discuss these issues in this blog post (although they are very closely related to the point I wish to make).
+Instead, my goal is to take a modest scientific outlook towards the role of behavioral sciences in the design of such systems.&lt;/p&gt;
+
+&lt;p&gt;Let’s say you need to travel to keep an appointment or reach the airport to catch a flight. 
+You open Google Maps or some other navigation app and check for possible routes and the estimated times of arrival. 
+If you are short on time, then your topmost concern would be to reach your destination as soon as possible. 
+Plus, you’d like to have a pretty good estimate of your arrival time.  Compare it with someone who might be using the same app but is looking for a scenic route and not so particular about his arrival time. 
+At any given time, hundreds of thousands of users are using such apps to find what suits them the best. 
+All these different people are going to have varied requirements based on their purposes and preferences while sharing the same infrastructure and resources. 
+The app reccommendations are going to affect their choices, and their choices have externalities that affect the conditions for others. 
+Ideally, we would like to make suggestions and assign routes to the different users based on everybody’s requirements and preferences in an “optimal” manner (with an appropriate definition of “optimality”).&lt;/p&gt;
+
+&lt;p&gt;For another example, consider a doctor who is performing a remote surgery and a social media influencer who is posting a video.
+I would say that the doctor requires much more certainty in his bandwidth allocation as compared to the influencer. (I hope we agree on this!)
+Can we design our systems to account for these differences in the user preferences and provide optimal services through appropriate incentives and nudges to the users?&lt;/p&gt;
+
+&lt;p&gt;This is actually not a new idea.
+We have been doing this for several years.
+Think about clearing the way for emergency vehicles or using emergency diversion routes.
+We have been using such techniques to reallocate resources based on the needs. 
+However, in the past, taking such policy steps required considerable efforts, and no wonder they were restricted to emergency situations. 
+However, in today’s world, where almost everybody uses some sort of navigation app to decide their routes, we have many more ways to influence the routing of traffic. 
+More so in the future with the advent of smart cars.&lt;/p&gt;
+
+&lt;p&gt;Sure, this requires knowing the preferences of the users. 
+But economists have already given us an answer to this. 
+It is not a far-fetched thought to imagine a world where you pay some points to get a route you prefer or earn some points to take a less preferred way. 
+We already have this in the form of tolls for bridges and expressways. But I want you to imagine a mechanism that works on a much larger scale in an integrated manner. 
+And one that accounts for the factors at the core of the problem - &lt;em&gt;the users and their preferences&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This leads to two directions to focus on - designing an efficient mechanism that works on a large scale and capturing the preferences of the users as accurately as possible. 
+For the first direction, implementing any policy at a large scale often requires mathematical models that capture the essence of the problem and building mechanisms and algorithms that would execute these policies. 
+By and large, this has been the engineering approach towards solving these problems. 
+Here the focus has been more on design efficiency and less on the social aspects along the lines of the second direction. 
+In several engineering tasks, social goals such as welfare or the well-being of each individual were assumed to be straightforward and often taken for granted. 
+On the other hand, these goals have mainly been the topic of interest in policy-making and economics. 
+Only recently have people started to integrate ideas from both these fields.&lt;/p&gt;
+
+&lt;p&gt;I believe there is a good reason for it. 
+Classical economics often treats people as if they were like Spock - formally called &lt;a href=&quot;https://en.wikipedia.org/wiki/Homo_economicus&quot;&gt;homo economicus&lt;/a&gt; - 
+the rational individual who always accounts for all the available information and makes decisions involving great computational power. 
+Firms and nations who have vast resources can afford to behave like Spock. And ideas from economics have played a significant role in governing their decisions. 
+For example, the notion of utility allows us to convert several decision problems into an optimization problem and solve them (often encounterd under the name of cost-benefit analysis). 
+However, for e-commerce platforms like social media and online marketplaces, where the participating agents are single individuals who perform several short-lived interactions with the platform, it is unusual that these agents would behave like Spock.&lt;/p&gt;
+
+&lt;p&gt;Working in an environment with growing human-computer interaction requires a better understanding of human behavior, often including the emotional traits displayed by them. 
+On the one hand, these have created the necessity to account for the behavioral traits of the users,
+and on the other hand, they have also provided us with extraordinary tools to act upon it.
+Especially, the data boom.
+This data comes in various forms right from the preferences of the users, their choices, their habits, their strengths, their weaknesses, to their emotional moods (which I recently learned can be measured by &lt;a href=&quot;https://www.technologyreview.com/2010/10/26/199707/sensor-detects-emotions-through-the-skin/&quot;&gt;watch-like devices through the slight electrical changes in the skin&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;These technological advancements have opened several new avenues at the intersection of engineering, technology, and social sciences.
+It has raised significant interest in the past few decades, mostly under the label of behavioral economics. 
+Although behavioral economics is often interpreted as creating nudges and changing the defaults to alter human behavior, I mean it in a more general sense.
+I like to think of it as also comprising of techniques such as pricing and taxing commonly encountered in economics, but in a manner that is aware of the deviations in human behavior.
+Or simply put, economics for information technologies without the Spock assumption.&lt;/p&gt;
+
+&lt;p&gt;You might have encountered such approaches under the label of boundedly rational behavior.
+But I feel that this term implicitly imposes certain restrictions.
+For example, a decision-maker is typically said to be rational if she her decisions are consistent with expected utility theory, and
+any deviation from this behavior is due her lack of Spock like abilities, and hence marked as irrational.
+On the contrary, I believe there are times when even if I had Spock like abilities I would chose to deviate from the prescriptions of expected utility theory. 
+See for example the famous &lt;a href=&quot;https://en.wikipedia.org/wiki/Allais_paradox&quot;&gt;Allais paradox&lt;/a&gt;.
+The point I wish to make here concerns with the general behavior which may or may not be a result of the lack of Spock like abilities.&lt;/p&gt;
+
+&lt;p&gt;For example, if we envision having automated decision-makers with Spock like abilities that assist each user, then we would like these assistants to make decisions according to the preferences of the corresponding users. 
+Even if these preferences do not satisfy certain notions of rationality.
+Certainly, we will have to make assumptions regarding the rationality features ranging from basic safety to commonly agreed upon aspects that one expects to be present in these systems.
+But my point is that, along with the correction of non-Spock like behavior, the design of such systems should also be flexible enough in  their definition of rationality.&lt;/p&gt;
+
+&lt;p&gt;I believe, it is the integration of behavioral economics and engineering that holds the right recipe to design robust and scalable systems that would interact and assist the users in making decisions that are in their own and the society’s best interests. 
+This is what I like to call Behavior-Aware System Design.
+Its systematic study and implementation is the next big leap that we need.&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Research</title>
+   <link href="https://sohamphade.github.io_site/2010/01/01/research-content/"/>
+   <updated>2010-01-01T00:00:00+05:30</updated>
+   <id>https://sohamphade.github.io/2010/01/01/research-content</id>
+   <content type="html">&lt;h2 id=&quot;research-themes&quot;&gt;Research Themes&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#section1&quot;&gt;Game Theory and Market Design when Agents have Cumulative Prospect Theory Preferences&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section2&quot;&gt;Learning in Repeated Games&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section3&quot;&gt;Optimal Resource Allocation over Networks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section4&quot;&gt;Cooperative games&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;span class=&quot;anchor&quot; id=&quot;section1&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;game-theory-and-market-design-when-agents-have-cumulative-prospect-theory-preferences&quot;&gt;Game Theory and Market Design when Agents have Cumulative Prospect Theory Preferences&lt;/h2&gt;
+
+&lt;p&gt;In this project, we systematically study game-theoretic settings (in particular, non-cooperative games) when the players’ preferences are modeled using &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_prospect_theory&quot;&gt;cumulative prospect theory (CPT)&lt;/a&gt;.
+CPT is a generalization of expected utility theory (EUT) and one of the leading decision theories to model human preferences when faced with uncertainty. It was proposed by &lt;a href=&quot;https://en.wikipedia.org/wiki/Daniel_Kahneman&quot;&gt;Daniel Kahneman&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Amos_Tversky&quot;&gt;Amos Tversky&lt;/a&gt; for which Kahneman received the &lt;a href=&quot;https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/facts/&quot;&gt;Nobel Memorial Prize in Economic Sciences&lt;/a&gt;. 
+There has been growing discussion concerning the benefits (and limits) of using CPT in game theory and economics. 
+In a series of papers, we discover several exciting equilibria related properties by revisiting some of the landmark results in game theory and mechanism design through the CPT lens.&lt;/p&gt;
+
+&lt;p&gt;See this &lt;a href=&quot;https://sohamphade.github.io/_site/cptgames/index.html&quot;&gt;post&lt;/a&gt; for further details about this project.&lt;/p&gt;
+
+&lt;h3 id=&quot;papers&quot;&gt;Papers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;S. Phade and V. Anantharam (2019). “On the Geometry of Nash and Correlated Equilibria with Cumulative Prospect Theoretic Preferences.” &lt;em&gt;Decision Analysis&lt;/em&gt; 16(2), 142-156.
+&lt;a href=&quot;https://pubsonline.informs.org/doi/abs/10.1287/deca.2018.0378?casa_token=7J9MUcsbZl4AAAAA:FArUlacTEA378xkYhAZXiy8JU7r78vGt__aQhm0RPs927EnOTR-LC_asRPrDS6ydaQr0yOXNcA&quot; target=&quot;_blank&quot;&gt;[link]&lt;/a&gt;
+&lt;a href=&quot;https://arxiv.org/abs/1712.00859&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;S. Phade and V. Anantharam. “Learning in Games with Cumulative Prospect Theoretic Preferences.” &lt;a href=&quot;https://arxiv.org/abs/1804.08005&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;S. Phade and V. Anantharam. “Black-box strategies and Equilibrium in Games with Cumulative Prospect Theory Preferences.” &lt;a href=&quot;https://arxiv.org/abs/2004.09592&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;S. Phade and V. Anantharam. “Mechanism Design for Cumulative Prospect Theory Agents: A General Framework and the Revelation Principle.” &lt;a href=&quot;https://arxiv.org/abs/2101.08722&quot; target=&quot;_blank&quot;&gt;[Link]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;span class=&quot;anchor&quot; id=&quot;section2&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;learning-in-repeated-games&quot;&gt;Learning in Repeated Games&lt;/h2&gt;
+
+&lt;p&gt;The literature on learning in games provides an alternative explanation to equilibrium notions as a long-run outcome in repeated games with mild rationality assumptions on the players. 
+It especially important from a behavioral perspective.
+We establish several related results when the players have cumulative prospect theory preferences.
+In another work, our preliminary analysis brings forth a fundamental trade-off property between the regret rate guarantees of the players and the convergence rates of their mixed-action strategies.
+In particular, we show that under certain conditions it is impossible for the mixed-actions of the two players in a game of &lt;a href=&quot;https://en.wikipedia.org/wiki/Matching_pennies&quot;&gt;matching pennies&lt;/a&gt; to converge almost surely if both the players decide to play optimal no-regret strategies.&lt;/p&gt;
+
+&lt;h3 id=&quot;papers-1&quot;&gt;Papers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;S. Phade and V. Anantharam. “Learning in Games with Cumulative Prospect Theoretic Preferences.” &lt;a href=&quot;https://arxiv.org/abs/1804.08005&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;V. Muthukumar, S. Phade, A. Sahai. “On the Impossibility of Convergence of Mixed Strategies with No-Regret Learning.” &lt;a href=&quot;https://arxiv.org/abs/2012.02125&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;span class=&quot;anchor&quot; id=&quot;section3&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;optimal-resource-allocation-over-networks&quot;&gt;Optimal Resource Allocation over Networks&lt;/h2&gt;
+
+&lt;p&gt;We consider the problem of congestion management in a network, and resource allocation amongst heterogeneous users, in particular human agents, with varying preferences. It has applications to transportation and telecommunication networks, smart grids, information and financial networks, labor markets, and social networks. Modeling the agents using CPT brings forward the surprising benefits of lottery-based allocations in increasing social welfare as compared to the corresponding EUT-based analysis. This conforms with the observation that lotteries help in influencing the behavior of people, which is backed by several experimental studies. Our work based on CPT analysis not only explains the above phenomenon theoretically but also provides a practical algorithm to design the optimum lottery allocations. It achieves this without actually knowing the CPT preferences of the agents through an
+appropriate pricing scheme.&lt;/p&gt;
+
+&lt;p&gt;The network resource allocation problem has been studied before. However, CPT-based analysis allows us to capture the user’s behavior towards risk, in particular, the “lure” for a small chance of winning and the “fear” of losing, leading to better &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;behavior-aware system designs (BASD)&lt;/a&gt;. Psychologically this is the same effect observed when people purchase lottery tickets and insurance. Furthermore, working with the general model of CPT preferences, which has inherent non-linearities present in it, requires developing new methods. These are useful more generally in designing algorithms for markets with CPT players, such as job markets, contests, financial services, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;span class=&quot;anchor&quot; id=&quot;short_video&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;video width=&quot;100%&quot; controls=&quot;&quot; poster=&quot;https://sohamphade.github.io/_site/assets/Short_video_poster.png&quot;&gt;
+  &lt;source src=&quot;http://sohamphade.github.io/files/CPTtalk.mp4&quot; type=&quot;video/mp4&quot; /&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In other related work, we develop similar techniques for optimal resource allocation in a scheduling framework. In particular, we consider the problem of optimal server allocation and scheduling in cloud computing systems. Current popular cloud providers employ fixed-rate pricing schemes that do not account for the delay and risk-sensitivity of the individuals. In contrast, a BASD approach would provide instant service with high certainty to a customer who is in urgent need of his job at a premium price based on the market demand, and delay the jobs of customers with reasonable wait-times with appropriately discounted prices. Our algorithm achieves this in an efficient manner that is practical to implement.&lt;/p&gt;
+
+&lt;h3 id=&quot;papers-2&quot;&gt;Papers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;S. Phade and V. Anantharam (2019). “Optimal Resource Allocation over Networks via Lottery-Based Mechanisms.” &lt;em&gt;International Conference on Game Theory for Networks&lt;/em&gt;, pp. 51–70. Springer, Cham
+&lt;a href=&quot;https://link.springer.com/chapter/10.1007/978-3-030-16989-3_4&quot; target=&quot;_blank&quot;&gt;[link]&lt;/a&gt;
+  &lt;a href=&quot;https://arxiv.org/abs/1812.00501&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;V. Gupta, S. Phade, T. Courtade, K. Ramchandran. “Utility-Based Resource Allocation and Pricing for
+Serverless Computing.” &lt;a href=&quot;https://arxiv.org/abs/2008.07793&quot; target=&quot;_blank&quot;&gt;[ArXiv]&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;span class=&quot;anchor&quot; id=&quot;section4&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cooperative-games&quot;&gt;Cooperative games&lt;/h2&gt;
+
+&lt;p&gt;We propose a novel solution concept for multi-player cooperative games with characteristics that are the best of both worlds - it always belongs to the core of such games whenever it exists and satisfies certain fairness properties similar to the Shapley value.&lt;/p&gt;
+
+&lt;h3 id=&quot;papers-3&quot;&gt;Papers&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;S. Phade and V. Anantharam. “A Fair and Stable Solution Concept for Balanced Cooperative Games.”&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+</content>
+ </entry>
+ 
+
+</feed>

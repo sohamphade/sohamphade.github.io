@@ -11,4 +11,7 @@
 !_site/*
 !_site/*/*
 
+!doc/*
+!doc/*/*
+
 !/files/*
