@@ -12,5 +12,12 @@
 !_site/*
 !_site/*/*
 
+<<<<<<< HEAD
 !/files/*
 !/css/*
+=======
+!docs/*
+!docs/*/*
+
+!/files/*
+>>>>>>> gh-pages
