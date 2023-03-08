@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Soham Phade</title>
- <link href="https://sohamphade.github.io/_site/atom.xml" rel="self"/>
- <link href="https://sohamphade.github.io_site/"/>
- <updated>2023-03-09T00:34:52+05:30</updated>
+ <link href="https://sohamphade.github.io/docs/atom.xml" rel="self"/>
+ <link href="https://sohamphade.github.iodocs/"/>
+ <updated>2023-03-09T00:46:25+05:30</updated>
  <id>https://sohamphade.github.io</id>
  <author>
    <name>Soham Phade</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Role of Communication, Data Analytics and Artificial Intelligence in Resource Allocation</title>
-   <link href="https://sohamphade.github.io_site/AI_comm_in_resource_alloc/"/>
+   <link href="https://sohamphade.github.iodocs/AI_comm_in_resource_alloc/"/>
    <updated>2021-05-27T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/AI-comm-in-resource-alloc</id>
    <content type="html">&lt;p&gt;The network resource allocation problem considered in Chapter 2 and the mechanism design framework discussed in Chapter 6 have several features in common. They comprise of a set of players which have preferences over their outcomes known privately to them. In the network resource allocation problem, the outcome for a player is the amount of resource al- located to that player, for example, bandwidth over the Internet. Resource allocation more generally would include things such as transportation units in vehicle routing or delivery systems, servers in computation networks, advertising space or visibility in social networks, or contract provisioning in financial networks or labor markets. On the other hand, player outcomes could take various forms as the delay experienced by a driver or a customer receiv- ing a delivery, the quality of the goods or services provided to the users, or it could be the financial gains or prospects associated with the outcome. The system operator is primarily responsible for allocating resources. In the network resource allocation problem, the system operator is assumed to allocate resources to each player provided they satisfy the capacity constraints. But more generally, as considered in the mechanism design framework (Chap- ter 6), it implements an allocation from the set of available allocations and the implemented allocation in turn influences the outcomes for each player.&lt;/p&gt;
@@ -73,7 +73,7 @@
  
  <entry>
    <title>Future of Behavioral Network Economics</title>
-   <link href="https://sohamphade.github.io_site/future_of_behavioral_net_econ/"/>
+   <link href="https://sohamphade.github.iodocs/future_of_behavioral_net_econ/"/>
    <updated>2021-05-20T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/future-of-beh-net-econ</id>
    <content type="html">&lt;p&gt;EUT has been the backbone of almost every development in economics and game theory. It feels natural to extend these achievements to more general and better models of behavior if possible. CPT is an excellent tool to make progress in this direction. In my experience, CPT often introduces several modeling complications, however, in most cases, as is evident from this thesis, it is possible to extend the results from game theory and economics to players with CPT preferences. In each instance, we had to make special provisions either to the underlying framework or define appropriate notions - new ones or old ones with modified interpretations. This portrays the richness of this pursuit and a cue for future undertakings along these lines.&lt;/p&gt;
@@ -106,7 +106,7 @@ However, whether my field view is the proper perspective, whether my efforts hav
  
  <entry>
    <title>Example Applications of Behavioral Network Economics</title>
-   <link href="https://sohamphade.github.io_site/applications_of_behavioral_net_econ/"/>
+   <link href="https://sohamphade.github.iodocs/applications_of_behavioral_net_econ/"/>
    <updated>2021-05-12T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/app-beh-net-econ</id>
    <content type="html">&lt;h2 id=&quot;transportation-networks&quot;&gt;Transportation Networks&lt;/h2&gt;
@@ -159,7 +159,7 @@ However, whether my field view is the proper perspective, whether my efforts hav
  
  <entry>
    <title>Introduction to Behavioral Network Economics</title>
-   <link href="https://sohamphade.github.io_site/intro_to_behavioral_net_econ/"/>
+   <link href="https://sohamphade.github.iodocs/intro_to_behavioral_net_econ/"/>
    <updated>2021-05-10T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/intro-to-behavioral-net-econ</id>
    <content type="html">&lt;p&gt;We will mainly be concerned with the study of social systems comprised of several individuals, typically humans, henceforth called players, interacting directly or indirectly in a bounded situation (or an environment). Systems influenced by technological innovations over the past several decades will be of particular interest to us. For example, these include transportation and communication networks, the Internet, computation networks and data-centers, energy and utility networks, financial networks, labor markets, social networks, and digital markets.&lt;/p&gt;
@@ -194,7 +194,7 @@ However, whether my field view is the proper perspective, whether my efforts hav
  
  <entry>
    <title>Three pillars of E-Commerce?</title>
-   <link href="https://sohamphade.github.io_site/gt_ecommerce/"/>
+   <link href="https://sohamphade.github.iodocs/gt_ecommerce/"/>
    <updated>2021-01-17T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/GT-ECommerce</id>
    <content type="html">&lt;p&gt;E-commerce applications have enabled economic aspects 
@@ -271,7 +271,7 @@ Amazon provides multiple delivery options with varying charges. Just as recommen
 They also determine the customer-company relations. 
 A better understanding of the customers’ behavioral responses will go a long way in designing these systems. 
 Several answers to this study will come from economics and game theory. 
-(See &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;Behavior-Aware System Design&lt;/a&gt; post for further discussion on this.)&lt;/p&gt;
+(See &lt;a href=&quot;https://sohamphade.github.io/docs/basd/index.html&quot;&gt;Behavior-Aware System Design&lt;/a&gt; post for further discussion on this.)&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;The final stage&lt;/strong&gt; is that of incorporating feedback. 
 It includes operations like keeping track of user actions, choices, responses, and ratings; collecting and processing this data. 
@@ -279,7 +279,7 @@ The digital revolution and the emergence of companies with billions of users hav
 It will help improve the effectiveness of the previous two stages.&lt;/p&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;https://sohamphade.github.io/_site/assets/3_pillars.png&quot; alt=&quot;3_pillars_of_ecommerce&quot; /&gt;
+  &lt;img src=&quot;https://sohamphade.github.io/docs/assets/3_pillars.png&quot; alt=&quot;3_pillars_of_ecommerce&quot; /&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;All this might sound similar to several articles over the Internet trumpeting cool ideas in the form of mantras or principles. 
@@ -438,7 +438,7 @@ However, if we want to answer questions like the objectives and impacts of these
  
  <entry>
    <title>Game Theory and Market Design when Agents have Cumulative Prospect Theory Preferences</title>
-   <link href="https://sohamphade.github.io_site/cptgames/"/>
+   <link href="https://sohamphade.github.iodocs/cptgames/"/>
    <updated>2020-11-09T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/CPTGames</id>
    <content type="html">&lt;p&gt;In this project, we systematically study game-theoretic settings (in particular, non-cooperative games) when the players’ preferences are modeled using &lt;a href=&quot;https://en.wikipedia.org/wiki/Cumulative_prospect_theory&quot;&gt;cumulative prospect theory (CPT)&lt;/a&gt;.
@@ -466,14 +466,14 @@ Knowledge about the structure of the equilibria, especially under presumably mor
 They can also help in suggesting system improvements or policy changes such as advertising strategies, cybersecurity, or military tactics – &lt;em&gt;like &lt;a href=&quot;https://en.wikipedia.org/wiki/WarGame&quot;&gt;WOPR from WarGames&lt;/a&gt;!&lt;/em&gt;&lt;/p&gt;
 
 &lt;!-- 
-| ![wargames movie image](https://sohamphade.github.io/_site/assets/wargames.jpg) | 
+| ![wargames movie image](https://sohamphade.github.io/docs/assets/wargames.jpg) | 
 |:--:| 
 | *Space* |
 ---&gt;
 
 &lt;!--
 &lt;figure&gt;
-  &lt;img src=&quot;https://sohamphade.github.io/_site/assets/wargames.jpg&quot; alt=&quot;my alt text&quot;/&gt;
+  &lt;img src=&quot;https://sohamphade.github.io/docs/assets/wargames.jpg&quot; alt=&quot;my alt text&quot;/&gt;
   &lt;figcaption&gt;The fictional US military supercomputer, War Operation Plan Response (WOPR), was programmed to simulate the possible outcomes of a nuclear war.&lt;/figcaption&gt;
 &lt;/figure&gt;
 ---&gt;
@@ -519,7 +519,7 @@ Such messages play the role of nudges that help in aligning the beliefs of the p
 &lt;p&gt;We already observe such &lt;a href=&quot;https://en.wikipedia.org/wiki/Nudge_theory&quot;&gt;nudges&lt;/a&gt; and incentives being used around us. 
 But a theory explaining these practices is still in an infant stage.
 Our mediated mechanism design framework is a very promising direction at explaining these observations theoretically and improving the design of these systems.
-Mechanism design is commonly referred to as the engineering side of game theory. These theoretical and methodological results can have substantial implications for the design of &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;behavior-aware systems&lt;/a&gt; such as online marketplaces and social networks.&lt;/p&gt;
+Mechanism design is commonly referred to as the engineering side of game theory. These theoretical and methodological results can have substantial implications for the design of &lt;a href=&quot;https://sohamphade.github.io/docs/basd/index.html&quot;&gt;behavior-aware systems&lt;/a&gt; such as online marketplaces and social networks.&lt;/p&gt;
 
 &lt;p&gt;There is an important common thread that runs through each of the above studies.
 CPT preferences do not satisfy something called the betweenness property.
@@ -610,7 +610,7 @@ We are at a fascinating juncture in this field, where theory and practice can as
  
  <entry>
    <title>Behavior-Aware System Design</title>
-   <link href="https://sohamphade.github.io_site/basd/"/>
+   <link href="https://sohamphade.github.iodocs/basd/"/>
    <updated>2020-11-05T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/BASD</id>
    <content type="html">&lt;p&gt;The recent decades have been marked by extensive technological advancements in domains such as Internet, Computing, Communication, and Artificial Intelligence.
@@ -705,7 +705,7 @@ Its systematic study and implementation is the next big leap that we need.&lt;/p
  
  <entry>
    <title>Research</title>
-   <link href="https://sohamphade.github.io_site/2010/01/01/research-content/"/>
+   <link href="https://sohamphade.github.iodocs/2010/01/01/research-content/"/>
    <updated>2010-01-01T00:00:00+05:30</updated>
    <id>https://sohamphade.github.io/2010/01/01/research-content</id>
    <content type="html">&lt;h2 id=&quot;research-themes&quot;&gt;Research Themes&lt;/h2&gt;
@@ -728,7 +728,7 @@ CPT is a generalization of expected utility theory (EUT) and one of the leading 
 There has been growing discussion concerning the benefits (and limits) of using CPT in game theory and economics. 
 In a series of papers, we discover several exciting equilibria related properties by revisiting some of the landmark results in game theory and mechanism design through the CPT lens.&lt;/p&gt;
 
-&lt;p&gt;See this &lt;a href=&quot;https://sohamphade.github.io/_site/cptgames/index.html&quot;&gt;post&lt;/a&gt; for further details about this project.&lt;/p&gt;
+&lt;p&gt;See this &lt;a href=&quot;https://sohamphade.github.io/docs/cptgames/index.html&quot;&gt;post&lt;/a&gt; for further details about this project.&lt;/p&gt;
 
 &lt;h3 id=&quot;papers&quot;&gt;Papers&lt;/h3&gt;
 
@@ -781,11 +781,11 @@ In particular, we show that under certain conditions it is impossible for the mi
 &lt;p&gt;We consider the problem of congestion management in a network, and resource allocation amongst heterogeneous users, in particular human agents, with varying preferences. It has applications to transportation and telecommunication networks, smart grids, information and financial networks, labor markets, and social networks. Modeling the agents using CPT brings forward the surprising benefits of lottery-based allocations in increasing social welfare as compared to the corresponding EUT-based analysis. This conforms with the observation that lotteries help in influencing the behavior of people, which is backed by several experimental studies. Our work based on CPT analysis not only explains the above phenomenon theoretically but also provides a practical algorithm to design the optimum lottery allocations. It achieves this without actually knowing the CPT preferences of the agents through an
 appropriate pricing scheme.&lt;/p&gt;
 
-&lt;p&gt;The network resource allocation problem has been studied before. However, CPT-based analysis allows us to capture the user’s behavior towards risk, in particular, the “lure” for a small chance of winning and the “fear” of losing, leading to better &lt;a href=&quot;https://sohamphade.github.io/_site/basd/index.html&quot;&gt;behavior-aware system designs (BASD)&lt;/a&gt;. Psychologically this is the same effect observed when people purchase lottery tickets and insurance. Furthermore, working with the general model of CPT preferences, which has inherent non-linearities present in it, requires developing new methods. These are useful more generally in designing algorithms for markets with CPT players, such as job markets, contests, financial services, etc.&lt;/p&gt;
+&lt;p&gt;The network resource allocation problem has been studied before. However, CPT-based analysis allows us to capture the user’s behavior towards risk, in particular, the “lure” for a small chance of winning and the “fear” of losing, leading to better &lt;a href=&quot;https://sohamphade.github.io/docs/basd/index.html&quot;&gt;behavior-aware system designs (BASD)&lt;/a&gt;. Psychologically this is the same effect observed when people purchase lottery tickets and insurance. Furthermore, working with the general model of CPT preferences, which has inherent non-linearities present in it, requires developing new methods. These are useful more generally in designing algorithms for markets with CPT players, such as job markets, contests, financial services, etc.&lt;/p&gt;
 
 &lt;p&gt;&lt;span class=&quot;anchor&quot; id=&quot;short_video&quot;&gt;&lt;/span&gt;&lt;/p&gt;
 
-&lt;video width=&quot;100%&quot; controls=&quot;&quot; poster=&quot;https://sohamphade.github.io/_site/assets/Short_video_poster.png&quot;&gt;
+&lt;video width=&quot;100%&quot; controls=&quot;&quot; poster=&quot;https://sohamphade.github.io/docs/assets/Short_video_poster.png&quot;&gt;
   &lt;source src=&quot;http://sohamphade.github.io/files/CPTtalk.mp4&quot; type=&quot;video/mp4&quot; /&gt;
 Your browser does not support the video tag.
 &lt;/video&gt;
